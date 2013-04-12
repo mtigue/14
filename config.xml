@@ -17,13 +17,15 @@
 
 
 
+<!--plugins--->
+<gap:plugin name="ChildBrowser" />
 
-  
-<access origin="*" />
+ 
+<!--get access to tall external domains--->
+ <access origin="*" />
 
 
  <feature name="http://api.phonegap.com/1.0/device" />
- 
  
 
     <preference name="phonegap-version" value="2.3.0" />
