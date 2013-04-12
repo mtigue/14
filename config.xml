@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.web4uonline.louisvocations"
         version   = "1.0.0">
-    <name>Confession App: Catholic</name> 
+    <name>St. Louis Vocations</name> 
 
     <description>
      A Vocations and Discernment for young men discerning a priesthood. Prayers, Questions, Videos, Readings, Reflections, and News. 
