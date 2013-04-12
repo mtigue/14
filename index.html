@@ -10,7 +10,15 @@
         <meta content="initial-scale=1.0, user-scalable=no" name="viewport">
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />	
         <meta name="apple-mobile-web-app-capable" content="yes">
-        
+ 
+
+       <!-- phonegap javascripts -->
+        <script src="phonegap.js"></script>
+        <script src="childbrowser.js"></script>
+
+
+
+       
 		<!-- You can put your own logo below linking photos for splash screen-->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/touch/apple-touch-icon-144x144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/touch/apple-touch-icon-114x114-precomposed.png">
@@ -146,8 +154,9 @@
                     You can use swipe feature on left menu. Let's try to swipe right and left you will be suprized. And also you can disable enable very easy this feature. Tiger is have multicolor theme layout system. You can change the theme color very easy.</p>
                     
                     <p>
-                    <a href="#" onClick="window.plugins.childbrowser.showWebPage('http://www.web4uonline.com');">www.web4uonline.com
-                    </a>
+                    <button onClick="window.plugins.childBrowser.showWebPage('http://www.google.com',
+                                        { showLocationBar: true });">www.web4uonline.com
+                    </button>
                     </p>
                     
                     <p>
@@ -1244,9 +1253,7 @@
 		<script src="assets/js/custom.js"></script>
         <script src="assets/js/add2home.js" charset="utf-8"></script><!-- Iphone Bubble  -->
         
-        <!-- phonegap javascripts -->
-        <script src="phonegap.js"></script>
-        <script src="childbrowser.js"></script>
+ 
         
         
         
