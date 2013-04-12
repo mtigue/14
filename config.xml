@@ -23,7 +23,7 @@
 <!--plugins--->
 <gap:plugin name="ChildBrowser" />
 
-</gap:plugin>
+
 
  
 <!--get access to tall external domains--->
