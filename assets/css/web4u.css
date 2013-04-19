@@ -17,6 +17,11 @@
 
 
 .homebox {background-color:#0f2c3f; width:60%; float:left; height:10%; padding:30px; font-size:20px; color:#FFFFFF; positions:absolute; 
-bottom:30px; float:left; margin-top:20% !important; float:left; 
+bottom:30px; float:left; margin-top:50px; !important; float:left; 
 
  }
+
+
+.text-info h3 {margin:20px 0px 5px 0px !important; clear:left !important; text-shadow: 0px !important; }
+
+.text-info p {font-size:14px !Important; }
