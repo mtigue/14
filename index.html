@@ -16,7 +16,7 @@
         <script src="phonegap.js"></script>
         <script src="childbrowser.js"></script>
 
-
+ 
 
        
 		<!-- You can put your own logo below linking photos for splash screen-->
@@ -55,8 +55,12 @@
         <link rel="stylesheet" href="assets/css/normalize.css">
         <link rel="stylesheet" href="assets/css/main.css">
 		<link rel="stylesheet" href="assets/css/photoswipe.css">
-
-        <link rel="stylesheet" type="text/css" href="assets/css/icons/nav-icons-black.css"> 
+	    <link rel="stylesheet" type="text/css" href="assets/css/icons/nav-icons-black.css"> 
+        
+        <!--web4u css-->
+        <link rel="stylesheet" href="assets/css/web4u.css">
+        
+        
         <!-- / CSS Files -->
         
         <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
@@ -65,7 +69,151 @@
         -->
         
 </head>
-    <body>        
+    <body>
+    
+
+
+ <!--<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>-->
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery_1.5.2.min.js"></script>
+        <script type="text/javascript" src="PushNotification.js"></script>
+        
+        <script type="text/javascript">
+            var pushNotification;
+            
+            function onDeviceReady() {
+                $("#app-status-ul").append('<li>deviceready event received</li>');
+                
+				document.addEventListener("backbutton", function(e)
+				{
+                	$("#app-status-ul").append('<li>backbutton event received</li>');
+  					
+      				if( $("#home").length > 0)
+					{
+						// call this to get a new token each time. don't call it to reuse existing token.
+						//pushNotification.unregister(successHandler, errorHandler);
+						e.preventDefault();
+						navigator.app.exitApp();
+					}
+					else
+					{
+						navigator.app.backHistory();
+					}
+				}, false);
+
+				try 
+				{ 
+                	pushNotification = window.plugins.pushNotification;
+                	if (device.platform == 'android' || device.platform == 'Android') {
+						$("#app-status-ul").append('<li>registering android</li>');
+                    	pushNotification.register(successHandler, errorHandler, {"senderID":"506974520454","ecb":"onNotificationGCM"});		// required!
+					} else {
+						$("#app-status-ul").append('<li>registering iOS</li>');
+                    	pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});	// required!
+                	}
+                }
+				catch(err) 
+				{ 
+					txt="There was an error on this page.\n\n"; 
+					txt+="Error description: " + err.message + "\n\n"; 
+					alert(txt); 
+				} 
+            }
+            
+            // handle APNS notifications for iOS
+            function onNotificationAPN(e) {
+                if (e.alert) {
+                     $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
+                     navigator.notification.alert(e.alert);
+                }
+                    
+                if (e.sound) {
+                    var snd = new Media(e.sound);
+                    snd.play();
+                }
+                
+                if (e.badge) {
+                    pushNotification.setApplicationIconBadgeNumber(successHandler, e.badge);
+                }
+            }
+            
+            // handle GCM notifications for Android
+            function onNotificationGCM(e) {
+                $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
+                
+                switch( e.event )
+                {
+                    case 'registered':
+					if ( e.regid.length > 0 )
+					{
+						$("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
+						// Your GCM push server needs to know the regID before it can push to this device
+						// here is where you might want to send it the regID for later use.
+						console.log("regID = " + e.regID);
+					}
+                    break;
+                    
+                    case 'message':
+                    	// if this flag is set, this notification happened while we were in the foreground.
+                    	// you might want to play a sound to get the user's attention, throw up a dialog, etc.
+                    	if (e.foreground)
+                    	{
+							$("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
+
+							// if the notification contains a soundname, play it.
+							var my_media = new Media("/android_asset/www/"+e.soundname);
+							my_media.play();
+						}
+						else
+						{	// otherwise we were launched because the user touched a notification in the notification tray.
+							if (e.coldstart)
+								$("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
+							else
+							$("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
+						}
+
+						$("#app-status-ul").append('<li>MESSAGE -> MSG: ' + e.payload.message + '</li>');
+						$("#app-status-ul").append('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt + '</li>');
+                    break;
+                    
+                    case 'error':
+						$("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
+                    break;
+                    
+                    default:
+						$("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+                    break;
+                }
+            }
+            
+            function tokenHandler (result) {
+                $("#app-status-ul").append('<li>token: '+ result +'</li>');
+                // Your iOS push server needs to know the token before it can push to this device
+                // here is where you might want to send it the token for later use.
+            }
+
+            function successHandler (result) {
+                $("#app-status-ul").append('<li>success:'+ result +'</li>');
+            }
+            
+            function errorHandler (error) {
+                $("#app-status-ul").append('<li>error:'+ error +'</li>');
+            }
+            
+			document.addEventListener('deviceready', onDeviceReady, true);
+
+         </script>
+
+
+
+
+
+
+
+
+
+
+        
     	<!-- Menu Begin -->
         <div id="menu">
         		
@@ -91,13 +239,18 @@
                     <li><a href="#home" class="contentLink" data-transition="fade">Home Page <span class="icon"></span></a></li>
                     <li><a href="#aboutus" class="contentLink" data-transition="pop">Prayers<span class="icon"></span></a></li>
                     <li><a href="#services" class="contentLink" data-transition="flip">Questions<span class="icon"></span></a></li>
-                    <li><a href="#blog" class="contentLink" data-transition="fade">Readings<span class="icon"></span></a></li>
+                    <li><a href="#blog" class="contentLink" data-transition="fade">Reflections<span class="icon"></span></a></li>
                     <li><a href="#products" class="contentLink" data-transition="fade">Videos<span class="icon"></span></a></li>
-                    <li><a href="#products" class="contentLink" data-transition="fade">Seminaries<span class="icon"></span></a></li>
+                    <li><a href="#portfolio" class="contentLink" data-transition="fade">Seminaries<span class="icon"></span></a></li>
                     
                     <li><a href="#gallery" class="contentLink" data-transition="flip">News & Events<span class="icon"></span></a></li>
                     
                     <li><a href="#contact" class="contentLink" data-transition="slideup">Contact<span class="icon"></span></a></li>
+                    
+                    
+                    
+                    <li><a href="#twitter" class="contentLink" data-transition="slide">Twitter<span class="icon"></span></a></li>
+
                
                </ul>
             
@@ -111,133 +264,92 @@
         <!-- *********************************************************
        	 HOME PAGE BEGIN
         ********************************************************* -->
-        <div data-role="page" class="pages" id="home" data-theme="i">
+        <div data-role="page" class="pages" id="home" data-theme="i" style="background-image:url('img2/basc.jpg');">
         	
+          
             <!-- Header Begin -->
             <div data-role="header" class="header" data-theme="h">
             <a href="#" class="showMenu menuBtn">Menu</a>
-            <div class="logo">&nbsp;</div>
+            <div class="logo">Discernment App</div>
             </div>
             <!-- /header -->
             
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Home">Home</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+            
+            
             <!-- Content Begin -->
             <div data-role="content">
-            	
-            	<!-- Slider -->     
-                <div class="flex-container">
-                  <div class="flexslider">
-                   <ul class="slides"> 
-                        <li>
-                        <img src="assets/images/Demo/Slide/demo1.jpg" alt="" />
-                        </li>
-                        <li> 
-                        <img src="assets/images/Demo/Slide/demo4.jpg" alt="" />
-                        </li>
-                        <li>
-                        <img src="assets/images/Demo/Slide/demo3.jpg" alt="" />
-                        </li>
-                        <li>
-                        <img src="assets/images/Demo/Slide/demo2.jpg" alt="" />
-                        </li>  
-                    </ul>
-                  </div>
-                </div>
-                <!-- / Slider -->
+            
+            
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	<img style="display:none;" src="assets/images/Demo/Slide/demo3.jpg" alt="img" class="align-center imgbox fixwidth">
+    
+
+            
                 
-               
-                <!-- Text Area --> 
-                <div class="text-box-area">       
-                    <div class="text-info">
-                    <p>
-                    <img src="assets/images/Demo/c1.jpg" width="65" alt="img" class="align-left imgbox">
-                    <strong>Amazing Touch Functions!</strong><br/>
-                    You can use swipe feature on left menu. Let's try to swipe right and left you will be suprized. And also you can disable enable very easy this feature. Tiger is have multicolor theme layout system. You can change the theme color very easy.</p>
-                    
-                    <p>
-                    <button onClick="window.plugins.childBrowser.showWebPage('http://www.google.com',
-                                        { showLocationBar: true });">www.web4uonline.com
-                    </button>
-                    </p>
-                    
-                    <p>
-                    <script type="text/javascript" src="http://www.web4uonline.com/louis/basic.js"></script>
-                    </p>
-                    <p>
-                    <script type="text/javascript" src="http://form.jotformpro.com/jsform/22997307632966"></script>                    </p>
-                    
-                    
-                    </div>
+                <div class="text-info" style="display:none;">
+                <p>
+                <strong>Also you can use Navbar!</strong><br/>
+                Tiger jQuery Mobile Template is have awesome footer navbar with premium icons. You can use over 100 icons with this navbar. And you can use it with jQuery Mobile fixed feature. Just tap screen one time and hide show navbar. If you want you can disable this feature easly.</p>
+                </div>
                 </div>
                 <!-- / Text Area -->
                 
-          		<div class="clearfix"></div>
-				
+                <div class="clearfix"></div>
                 
-                <!-- Collapsed Area -->
-                <div data-role="collapsible-set">
-                    <div data-role="collapsible" data-collapsed="false">
-                        <h3>List Styles</h3>
-                         
-                        <!-- Star List -->
-                        <ul class="starlist">
-                            <li>Star List</li>
-                        </ul>
-                        <!-- / Star List -->
-                        
-                        <!-- Check List -->
-                        <ul class="checklist">
-                            <li>Check List</li>
-                        </ul>
-                        <!-- / Check List -->
-                        
-                        <!-- Bullet List -->
-                        <ul class="bulletlist">
-                            <li>Bullet List</li>
-                        </ul>
-                        <!-- / Bullet List -->
-                        
-                        <!-- Numbered List -->
-                        <ol>
-                            <li>Ordered List</li>
-                        </ol> 
-                        <!-- / Numbered List -->
-                    </div>
-                    
-                    
-                    <div data-role="collapsible" data-collapsed="true">
-                    
-                        <h3>Messages</h3>
-                        <!-- Message style start //-->
-                        <div class="text-info">
-                        <div class="info">This is information message</div>
-                        <div class="success">This is success message</div>
-                        <div class="warning">This is warning message</div>
-                        <div class="error">This is error message</div>
-                        </div>
-                        <!-- Message style end //-->
-                    
-                    </div>
-                    
-                    
-                    <div data-role="collapsible" data-collapsed="true">
-                    
-                         <h3>Highlights</h3>
-                         <!-- Highlight -->
-                         <div class="text-info">
-                         <p>Vestibulum molestie commodo lobortis. <span class="highlight-yellow">Vivamus</span> vulputate velit eget eros suscipit ullamcorper.          </p>
-                         <p>Vestibulum molestie commodo lobortis. <span class="highlight-dark">Vivamus</span> vulputate velit eget eros suscipit ullamcorper.          </p>
-                         <p>Vestibulum molestie commodo lobortis. <span class="highlight-green">Vivamus</span> vulputate velit eget eros suscipit ullamcorper.          </p>
-                         <p>Vestibulum molestie commodo lobortis. <span class="highlight-red">Vivamus</span> vulputate velit eget eros suscipit ullamcorper.</p>
-                         </div>
-                         <!-- / Highlight -->
-                          
-                    </div>
-                    
-                </div>
-                <!-- / Collapsed Area --> 
-        
+                
+            
+            
+            <div class="homebox">
+            
+            
+            
+            Archdiocese of St. Louis Vocation Discernment App
+            <div style="height:1em"></div>
+            
+         
+            <a href="#" class="showMenu">
+             <button class="showMenu">Get Started</button>
+</a>
+          
+            
             </div>
-            <!-- /content -->
+            
+          
+            
+            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
+            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="i" style="display:none;">
+         
+                <div data-role="navbar" class="nav-glyphish" data-grid="a">
+                    <ul>
+                    
+                  
+<li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+
+                    
+                    <div style="display:none;">
+                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
+                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                    </div>
+                    
+                    
+                    </ul>
+               
+                 </div> </div>
+            </div>
+            <!-- end -->
         </div>
         <!-- *********************************************************
        	 HOME PAGE END

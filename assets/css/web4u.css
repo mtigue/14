@@ -1,0 +1,22 @@
+﻿.full-image img {
+	max-width: 100%;
+    height: auto;
+    
+    background-image:url('../../img2/basc.jpg');
+   
+
+ width: auto\9; /* ie8 */ 
+   
+   
+    }
+
+
+.logo {width:250px !Important; height:35px !important; margin-top:15px; text-align:center !Important; background-image:none !Important; font-size:20px; color:#FFFFFF; }
+
+
+
+
+.homebox {background-color:#0f2c3f; width:60%; float:left; height:10%; padding:30px; font-size:20px; color:#FFFFFF; positions:absolute; 
+bottom:30px; float:left; margin-top:20% !important; float:left; 
+
+ }
