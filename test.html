@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+</head>
+
+<body>
+
+
+<!------------------------refresh iframes---------------------->
+<script type="text/javascript">
+function refresh()
+{
+var x=document.getElementById("iframe").src;
+document.getElementById("iframe").src=x;
+}
+</script>
+<!-----------------------------end news------------------------>
+
+
+              
+               
+               <button data-icon="refresh" onclick="refresh()">Update News Stories</button>
+               
+              
+               
+               
+               <iframe id="iframe" border="0" height="10000px" frameborder="0" width="100%" scrolling="no" style="border:0px;" onloads="scrolltotop()"  src="http://www.web4uonline.com/louis/news.php"></iframe>
+               
+
+
+</body>
+
+</html>

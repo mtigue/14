@@ -1,0 +1,2121 @@
+<!DOCTYPE html>
+
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>St. Louis Vocations</title>
+        <meta name="description" content="">
+        
+        <!-- Mobile Tags -->
+        <meta content="initial-scale=1.0, user-scalable=no" name="viewport">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />	
+        <meta name="apple-mobile-web-app-capable" content="yes">
+ 
+
+       <!-- phonegap javascripts -->
+        <script src="phonegap.js"></script>
+        <script src="childbrowser.js"></script>
+
+ 
+
+       
+		<!-- You can put your own logo below linking photos for splash screen-->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/images/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="assets/images/touch/apple-touch-icon.png">
+		<!-- / Mobile Tags -->
+       
+ 
+        <!-- Splash screens -->
+        <!-- iPhone 320x460 -->
+        <link href="assets/images/splashscreens/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        <!-- iPhone (Retina) 640x920 -->
+        <link href="assets/images/splashscreens/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <!-- iPhone 5 640x1096-->
+        <link href="assets/images/splashscreens/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <!-- iPad 768x1004 / 748x1024-->
+        <link href="assets/images/splashscreens/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        <link href="assets/images/splashscreens/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        <!-- iPad (Retina) 1536x2008 / 1496x2048 -->
+        <link href="assets/images/splashscreens/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link href="assets/images/splashscreens/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+  	<!-- / Splash Screens -->
+        
+        
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="assets/css/jquery.mobile.structure-1.0.1.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/jquery.mobile.1.0.1.min.css" />
+        <link rel="stylesheet" href="assets/css/add2home.css"><!-- Iphone Bubble  -->
+        <link rel="stylesheet" href="assets/css/icons/icons.css" type="text/css" >
+        <link rel="stylesheet" href="assets/css/icons/nav-icons.css" type="text/css" >
+		<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css" > <!-- Theme Style Sheet File -->
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="assets/css/photoswipe.css">
+	    <link rel="stylesheet" type="text/css" href="assets/css/icons/nav-icons-black.css"> 
+        
+        <!--web4u css-->
+        <link rel="stylesheet" href="assets/css/web4u.css">
+        
+        
+<!--scroll to top-->        
+<script language="javascript"> 
+function scrolltotop() { 
+scroll(0,0); 
+} 
+</script>
+<!-->        
+        
+        <!-- / CSS Files -->
+        
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
+        
+</head>
+    <body style="height:100%;">
+    
+
+
+ <!--<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>-->
+        <script type="text/javascript" charset="utf-8" src="jquery_1.5.2.min.js"></script>
+        <script type="text/javascript" src="PushNotification.js"></script>
+        
+        <script type="text/javascript">
+            var pushNotification;
+            
+            function onDeviceReady() {
+                $("#app-status-ul").append('<li>deviceready event received</li>');
+                
+				document.addEventListener("backbutton", function(e)
+				{
+                	$("#app-status-ul").append('<li>backbutton event received</li>');
+  					
+      				if( $("#home").length > 0)
+					{
+						// call this to get a new token each time. don't call it to reuse existing token.
+						//pushNotification.unregister(successHandler, errorHandler);
+						e.preventDefault();
+						navigator.app.exitApp();
+					}
+					else
+					{
+						navigator.app.backHistory();
+					}
+				}, false);
+
+				try 
+				{ 
+                	pushNotification = window.plugins.pushNotification;
+                	if (device.platform == 'android' || device.platform == 'Android') {
+						$("#app-status-ul").append('<li>registering android</li>');
+                    	pushNotification.register(successHandler, errorHandler, {"senderID":"506974520454","ecb":"onNotificationGCM"});		// required!
+					} else {
+						$("#app-status-ul").append('<li>registering iOS</li>');
+                    	pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});	// required!
+                	}
+                }
+				catch(err) 
+				{ 
+					txt="There was an error on this page.\n\n"; 
+					txt+="Error description: " + err.message + "\n\n"; 
+					alert(txt); 
+				} 
+            }
+            
+            // handle APNS notifications for iOS
+            function onNotificationAPN(e) {
+                if (e.alert) {
+                     $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
+                     navigator.notification.alert(e.alert);
+                }
+                    
+                if (e.sound) {
+                    var snd = new Media(e.sound);
+                    snd.play();
+                }
+                
+                if (e.badge) {
+                    pushNotification.setApplicationIconBadgeNumber(successHandler, e.badge);
+                }
+            }
+            
+            // handle GCM notifications for Android
+            function onNotificationGCM(e) {
+                $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
+                
+                switch( e.event )
+                {
+                    case 'registered':
+					if ( e.regid.length > 0 )
+					{
+						$("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
+						// Your GCM push server needs to know the regID before it can push to this device
+						// here is where you might want to send it the regID for later use.
+						console.log("regID = " + e.regID);
+					}
+                    break;
+                    
+                    case 'message':
+                    	// if this flag is set, this notification happened while we were in the foreground.
+                    	// you might want to play a sound to get the user's attention, throw up a dialog, etc.
+                    	if (e.foreground)
+                    	{
+							$("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
+
+							// if the notification contains a soundname, play it.
+							var my_media = new Media("/android_asset/www/"+e.soundname);
+							my_media.play();
+						}
+						else
+						{	// otherwise we were launched because the user touched a notification in the notification tray.
+							if (e.coldstart)
+								$("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
+							else
+							$("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
+						}
+
+						$("#app-status-ul").append('<li>MESSAGE -> MSG: ' + e.payload.message + '</li>');
+						$("#app-status-ul").append('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt + '</li>');
+                    break;
+                    
+                    case 'error':
+						$("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
+                    break;
+                    
+                    default:
+						$("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+                    break;
+                }
+            }
+            
+            function tokenHandler (result) {
+                $("#app-status-ul").append('<li>token: '+ result +'</li>');
+                // Your iOS push server needs to know the token before it can push to this device
+                // here is where you might want to send it the token for later use.
+            }
+
+            function successHandler (result) {
+                $("#app-status-ul").append('<li>success:'+ result +'</li>');
+            }
+            
+            function errorHandler (error) {
+                $("#app-status-ul").append('<li>error:'+ error +'</li>');
+            }
+            
+			document.addEventListener('deviceready', onDeviceReady, true);
+
+         </script>
+
+
+
+
+
+
+
+
+
+
+        
+    	<!-- Menu Begin -->
+        <div id="menu" style="background-images:url('img2/blue.jpg'); background-repeat:repeat; background-color:#0f2c3f;">
+        		
+                <!-- Social Links -->
+             
+            	<div class="social-links">
+            	
+                    <p><a class="twitter" href="#"></a></p>
+                    <p><a class="rss" href="#"></a></p>
+                    <p><a class="facebook" href="#"></a></p>
+                    <p><a class="googleplus" href="#"></a></p>
+                    <p><a class="linkedin" href="#"></a></p>
+                </div>
+                <!-- / Social Links -->
+                
+                
+                <div class="hr-full-black"></div>
+            
+            
+            
+           		<ul>
+            	
+                    <li><a href="#home" class="contentLink" data-transition="none">Home Page <span class="icon"></span></a></li>
+                    
+                    
+                     <li><a href="#prayers" class="contentLink" data-transition="none">Vocation Basics<span class="icon"></span></a></li>
+                    
+                    <li><a href="#questions" class="contentLink" data-transition="none">Common Questions<span class="icon"></span></a></li>
+                    
+                    <li><a href="#prayers" class="contentLink" data-transition="none">Prayers<span class="icon"></span></a></li>
+                   
+                   <li><a href="#prayers" class="contentLink" data-transition="none">Scriptures<span class="icon"></span></a></li>
+                   
+                   
+                     
+                     <li><a href="#videos" class="contentLink" data-transition="none">Videos<span class="icon"></span></a></li>
+                    
+                    <li><a href="#news" class="contentLink" data-transition="none">News & Events<span class="icon"></span></a></li>
+                    
+                    
+                     
+                    
+                   
+                    
+                    
+                    <li><a href="#prayers" class="contentLink" data-transition="none">Contact<span class="icon"></span></a></li>
+                    
+                    
+                    
+                   
+
+               
+               </ul>
+            
+            
+        </div>
+        <!-- /Menu -->
+        
+        
+        
+        
+        <!-- *********************************************************
+       	 HOME PAGE BEGIN
+        ********************************************************* -->
+        
+        
+        <div data-role="page" class="pages" id="home" data-theme="i" style="background-colors:#CCCCCC !important; background-images:url('img2/vm.jpg'); max-width: 100%; height:auto;" style="height:1200px !important; ">
+        
+        
+        
+        <div class="homebg" style="height:100%;">	
+          
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">Discernment App</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Home">Home</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+            
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            
+            
+            
+                
+               
+                
+                
+            
+            
+            <div class="homebox">
+            
+            
+            
+            Archdiocese of St. Louis Vocation Discernment App
+            <div style="height:1em"></div>
+            
+         
+            <a href="#" class="showMenu">
+             <button class="showMenu">Get Started</button>
+</a>
+          
+            
+            </div>
+            
+          
+            
+            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
+            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="i" style="display:none;">
+         
+                <div data-role="navbar" class="nav-glyphish" data-grid="a">
+                    <ul>
+                    
+                  
+<li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+
+                    
+                    <div style="display:none;">
+                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
+                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                    </div>
+                    
+                    
+                    </ul>
+               
+                 </div> </div>
+            </div>
+            <!-- end -->
+ 
+</div> <!--end full width for background-->   
+ 
+
+
+
+       </div>
+        
+        
+    
+        <!-- *********************************************************
+       	 HOME PAGE END
+        ********************************************************* -->
+        
+        
+            
+       
+        
+        
+        
+        <!-- *********************************************************
+       	VOCATION BASICS
+        ********************************************************* -->
+        <div data-role="page" class="pages pagesbg" id="prayers" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">Discernment App</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="About Us">Vocation Basics</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	<img src="img2/library.jpg" alt="img" class="align-center imgbox fixwidth">
+                
+                <div class="text-info" style="height:100%;">
+                
+                <h2>Vocation Basics</h2>
+                
+                <p>
+                Here you will find introductory information about the true meaning of a vocation, the role of discernment, and the universal call to holinesss.</p>
+
+                
+           
+                
+              
+
+                
+                
+                
+                </div><!--text info-->
+                </div>
+                <!-- / Text Area -->
+                
+                <div class="clearfix"></div>
+                
+                <!-- Collapsed Area -->
+                <div data-role="collapsible-set">
+                  <div data-role="collapsible">
+                    <h3>What does the word Vocation mean?</h3>
+                    
+                    <div class="text-info">
+               
+                  
+  <p>
+  The word vocation comes from the latin vocare which means “to call”. It is important for us to know two fundamental things about vocations. First, everyone has a vocation. God calls each of His sons and daughters to know, love and serve Him in this life so as to live with Him forever in heaven. Second, a vocation is not a job, it is an identity and pathway for us to conform ourselves ever more closely to Jesus Christ. Whether it be marriage, holy orders, consecrated life, or a dedicated single life, the end is the same; holiness.
+  </p>
+
+
+
+
+                    </div><!--end text info-->
+                    
+                  </div><!--end collapsible-->
+                  
+                  
+                  
+                  <div data-role="collapsible">
+                    <h3>What does Discernment mean?</h3>
+                    
+                    <div class="text-info">
+               
+                  
+      <p>
+      How many times have you been really hungry at a restaurant and looked at the menu and thought to yourself It all looks so good, I’m having trouble deciding.? This is discernment. Discernment is not a choice between good or evil (that’s temptation). Rather, it is literally a “cutting away” until we come to know what is best. Through prayer, spiritual direction and good advice, we are all called to discern the menu of vocations that God has before us, until we discover what is best according to God’s plan for our lives.
+      </p>
+
+
+
+                    </div><!---end text info-->
+                    
+                  </div><!---end collapsible-->
+
+                  
+                  
+                  <div data-role="collapsible" data-collapsed="true">
+                  
+                  <h3>How do I discern?</h3>
+                  
+  <div class="text-info">
+ <p>
+There are some very simple steps that everyone should follow in discernment.                    
+    
+</p>
+
+<ol>
+<li><strong>Prayer<br></strong>God does not call us on our cell phones or friend us on Facebook. Rather, He speaks to us in the depths of our hearts, through simple promptings, stirrings and desires. Only through time spent in quiet prayer can we pay better attention to the the whisperings of God in our hearts.</li>
+
+
+<li><strong>Scripture</strong><br>
+St. Jerome once said “Ignorance of scripture is ignorance of Christ”. Spending a few minutes each day reflecting on the living word of God found in sacred scripture dramatically impacts our faith life. God still speaks to us through scripture and can use His divine word to guide us in our discernment.</li>
+
+
+<li>
+<strong>Spiritual Direction</strong><br>
+We are not in this alone! Part of discernment is opening ourselves up to the gift of Council. A spiritual director is not someone who tells you what to do, but rather acts as an outside observer as to what it appears God is doing in your life. All the great spiritual masters of the Church recommend good spiritual direction. Ask your parish priest, youth minister or vocation director to help you find someone that you can meet with periodically to discuss your spiritual life.
+
+
+</li>
+
+
+<li>
+<strong>Sacraments</strong><br>
+As Catholics we are guaranteed interaction with God’s grace through the Sacraments. Do not waste this gift! Sunday mass and monthly confession should be standard for any young person discerning a vocation. Weekday mass and Eucharistic adoration should also begin to develop over time.
+
+</li>
+
+<li>
+<strong>Talk to a Priest or Religious</strong><br>
+You can only learn so much about a vocation looking at it from the outside. Find a time and some courage to sit down and talk with a priest or religious about their own vocation story and what life is like for them.
+</li>
+
+<li>
+<strong>Go on a Discernment Retreat</strong><br>
+Most vocation offices and religious communities have retreats throughout the year that are open to young men and women who are discerning a religious vocation. Accept Jesus’ invitation to “Come and See” and spend some time at the seminary or with a religious community.
+</li>
+
+
+</ol>
+
+
+
+
+
+					</div><!--end text-info-->
+                  </div><!--end collapsible-->
+        
+     <div data-role="collapsible" data-collapsed="true">
+                  
+                  <h3>3 things necessary for Salvation</h3>
+                  
+  <div class="text-info">
+ <p>
+St. Thomas and the 3 things necessary for Salvation                    
+    
+</p>
+
+<ol>
+<li><strong>Know what to believe<br></strong>
+An important aspect for growing closer to Jesus is to grow in our understanding and knowledge of His bride the Church. Guided by the Holy Spirit, the Catholic Church contains the fullness of truth about who God is (revealed to us in the Blessed Trinity) and who we are as beloved sons and daughters of our heavenly Father. All of the Church’s teachings are derived from this foundation.</li>
+
+
+<li><strong>Know what to desire</strong><br>
+We all have desires. Some exist on the natural level, such as the desire for food when I am hungry and warmth when I am cold. Others exist on the emotional level, such as the desire for joy, the desire to be loved. But we also have spiritual desires that are the most important. These include the desire to know that I am beloved, that I have intrinsic worth and value, the desire for greatness (holiness). Ultimately, as we walk on our Christian journey, we pray that our desires become united to Jesus’ desires. Father, not my will, but yours be done. In doing so, we fulfill the primordial desire that God has created us with....the desire for communion...to be one with another...one with God, and one with His body, the Church.</li>
+
+
+<li>
+<strong>Know what to do</strong><br>
+Knowing what to believe and what to desire do us little good unless we apply it to our daily lives in a practical way. If I believe that God created me for holiness, and I desire to do what He wants in my life, then my day to day actions ought to reflect it. Too often people describe themselves as “spiritual but not religious.” Often this means that they have little knowledge of what to believe, are only aware of their natural desires, and have even less knowledge of how to apply these realities to their daily lives.
+
+
+</li>
+
+</ol>
+
+
+
+
+
+					</div><!--end text-info-->
+                  </div><!--end collapsible-->
+
+
+ <div data-role="collapsible" data-collapsed="true">
+                  
+                  <h3>4 Identities of the Heart</h3>
+                  
+  <div class="text-info">
+ <p>
+When asked to describe themselves, people offer a variety of answers, from where they live, what school they go to, what teams they plan on, their hobbies, Facebook profiles etc...what rarely comes to people’s minds is to define themselves according to their relationship with God. If we are going to discover our vocations in life, we must begin by first defining ourselves differently. In looking at the life of Jesus, he publicly reveals different aspects of his identity in relationship to God the Father, the Holy Spirit, and the Church. Found within these relationships, we realize that Jesus also redefines who we are, by calling us to share in His identity as Christians. Pray about each of the following identities and ask the Holy Spirit to help solidify them within your heart.                   
+</p>
+
+<ol>
+<li><strong>Beloved Son/Daughter<br></strong>
+At the very beginning of his public ministry, Jesus is baptized in the Jordan river by St. John the Baptist. It was at this precise moment that Jesus’ identity as God the Father’s beloved son is first revealed to the crowds at large. “Behold, this is my beloved son, with whom I am well pleased” (Mt. 3:17). Through our own baptisms we now share in the identity of Christ and are able to cry out “Abba, Father” with him (RM8:15, Gal 4:6). Knowing our identity as a beloved son or daughter of God is the foundation of the Christian life, and if we have not received and claimed this identity, we will spend our entire lives searching for self-worth, value and purpose in the things of this world, which were never meant to fulfill us in the first place.</li>
+
+
+<li><strong>Brotherhood/Sisterhood</strong><br>
+Many of us have been blessed to have at least one sibling in our families. Even if you are an only child, through the spiritual adoption you received in baptism, you have become part of the Church, the living Body of Christ and now are able to call all other believers brothers and sisters. Jesus himself reveals himself to be our brother when he states “‘Who are my brothers’? And stretching out his hand toward his disciples, he said, ‘Here are my mother and brothers. For whoever does the will of my heavenly Father is my brother and sister, and mother’” (Mt 12:48-50). The two fundamental lessons in receiving our identity as a brother or sister in Christ are 1) I belong to and am a part of something larger than myself; and 2) my gifts and talents are not for myself, but to be shared with others. Our society tries to make everything into a competition, instead of a mutual sharing and building up of gifts. Ask yourself; What gifts and talents has God given to me and look around you to celebrate the gifts God has surrounded you with in your brothers and sisters.</li>
+
+
+<li>
+<strong>Bridegroom/Bride</strong><br>
+The third identity of the heart that God bestows upon each one of us is that of either bridegroom or bride. This identity is lived out in all vocations, not just in the married life. To be a bridegroom or a bride means that I have a heart so on fire with love that I freely give my complete self to another for the salvation of souls. Jesus refers to himself as the bridegroom on several occasions during his public ministry (Mt 9:15; 25:1-10). Our entire salvation history begins and ends with marriage...the marriage of Adam and Eve in the garden, and the marriage of Jesus to his bride the Church. All of us have the destiny to lay down our lives for another so that they might live. A priest lays down his life for the Church, a sister lays down her life for her spouse, Jesus, a husband and wife enter into the mystery of marriage in laying down their lives for each other. Each is a response of love to love. 
+</li>
+
+
+<li>
+<strong>Fatherhood/Motherhood</strong><br>
+The final identity that God calls us to grow into in our hearts is paternity; to be a father or mother to another. Jesus reveals to his disciples that “Whoever has seen me, has seen the Father “(Jn 14:9). The end of redemption is to reunite us with our Heavenly Father, and like Jesus, to reveal the Father’s love into the world. Priests and religious, like Jesus have no biological children, but have many spiritual children to whom they are called to nurture and love just as the Father desires. St. Paul reveals this mystery in his own life when he wrote to the people of Corinth, “I am writing this not to shame you, but to admonish you as my beloved children. Even if you should have countless guides to Christ, yet you do not have many fathers, for I became your father in Christ Jesus through the gospel” (1 Cor 4:14-15). 
+
+</li>
+
+
+
+</ol>
+
+
+
+
+
+					</div><!--end text-info-->
+                  </div><!--end collapsible-->
+
+
+
+
+
+
+
+        </div> 
+                <!-- / Collapsed Area -->
+        
+        
+            </div>
+            <!-- /content -->
+            
+            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
+            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a" style="display:none;">
+            
+                <div data-role="navbar" class="nav-glyphish" data-grid="c">
+                    <ul>
+                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
+                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- end -->
+        
+        </div>
+        
+        
+        
+        
+        
+        <!-- *********************************************************
+       	  END VOCATION BASICS
+        ********************************************************* -->
+        
+        
+        
+          <!-- *********************************************************
+       	 BEGIN QUESTIONS
+        ********************************************************* -->
+        <div data-role="page" class="pages pagesbg" id="questions" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">Discernment App</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Questions">Common Questions</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	<img src="img2/servers.jpg" alt="img" class="align-center imgbox fixwidth">
+                
+                <div class="text-info">
+                
+                <h2>Common Questions</h2>
+                
+               
+                </div>
+                <!-- / Text Area -->
+                
+                <div class="clearfix"></div>
+                
+                <!-- Collapsed Area -->
+                <div data-role="collapsible-set">
+                
+
+			  <div data-role="collapsible">
+                    <h3>Why can’t priests and religious get married?</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+              Priests and religious are married in a sense. While giving up a sacramental marriage with a husband or wife, priests and religious share in the same marriage that Jesus lived, giving their lives out of love for him and his people, and becoming spiritual parents to many.
+              </p>
+
+
+
+
+                    </div><!--end text info-->
+                    
+                  </div><!--end collapsible-->
+  
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>If I like dating that mean I don’t have a vocation?</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+            Not necessarily. Dating is the discernment of marriage, and we should all see the beauty of that vocation. Jesus speaks about those who give up marriage “for the sake of the kingdom” (Lk 18:29), and it wouldn’t be much of an offering if you didn’t find it attractive.              </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>What vows do you make?</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+            Diocesan priests actually don’t make vows, they make promises. Celibacy for the sake of the kingdom, a promise to pray for the people of God and a promise of obedience to the bishop and his successors. Religious priests, sisters and brothers, take the vows of poverty, chastity and obedience.              </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>What is the difference between a diocesan and religious order priest?</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+        Diocesan priests are typically serve a parish in a diocese and serve that same diocese for their entire life. Religious order priests (Jesuits, Franciscans, Benedictines, Dominicans etc...) first live out their lives in their communities, and serve the Church worldwide.        </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>What is the difference between a sister and a nun or a brother and a monk?</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+  Both sisters and nuns belong to religious communities. However, some men and women are called to a life of hidden contemplation in a monastery, and those we call monks or nuns.      </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>  How long does it take to get ordained? </h3>
+                    
+                    <div class="text-info">
+              
+              <p>A man entering out of high school will spend four years studying philosophy and another four studying theology, for a total of 8 years. A young man coming in after college will spend 6 years in formation, 2 in philosophy and 4 in theology.
+     </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+       <!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3> What should I look for when discerning a vocation? </h3>
+                    
+                    <div class="text-info">
+              
+              <p>Joy and peace are two great gifts of the Holy Spirit that confirm you are following God’s will. While every vocation has its difficulties and fears to be overcome, ultimately these two gifts, joy and peace, will prevail.
+     </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+     
+      
+               
+                </div> 
+                <!-- / Collapsed Area -->
+        
+            </div>
+            <!-- /content -->
+            
+            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
+            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a" style="display:none;">
+            
+                <div data-role="navbar" class="nav-glyphish" data-grid="c">
+                    <ul>
+                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
+                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- end -->
+        
+        </div>
+        
+        
+        
+        
+        
+        <!-- *********************************************************
+       	  END Questions
+        ********************************************************* -->
+
+
+    <!-- *********************************************************
+       	 BEGIN PRAYERS
+        ********************************************************* -->
+        <div data-role="page" class="pages pagesbg" id="prayers" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">Discernment App</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Prayers">Vocation Prayers</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	<img src="img2/servers.jpg" alt="img" class="align-center imgbox fixwidth">
+                
+                <div class="text-info">
+                
+                <h2>Vocation Prayers</h2>
+                
+               
+                </div>
+                <!-- / Text Area -->
+                
+                <div class="clearfix"></div>
+                
+                <!-- Collapsed Area -->
+                <div data-role="collapsible-set">
+   
+<!-----------begin question--------------------->             
+
+			  <div data-role="collapsible">
+                    <h3>Prayer 1</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+              Priests and religious are married in a sense. While giving up a sacramental marriage with a husband or wife, priests and religious share in the same marriage that Jesus lived, giving their lives out of love for him and his people, and becoming spiritual parents to many.
+              </p>
+
+
+
+
+                    </div><!--end text info-->
+                    
+                  </div><!--end collapsible-->
+  
+<!-----------end question--------------------->       
+  
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Prayer 2</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+            Not necessarily. Dating is the discernment of marriage, and we should all see the beauty of that vocation. Jesus speaks about those who give up marriage “for the sake of the kingdom” (Lk 18:29), and it wouldn’t be much of an offering if you didn’t find it attractive.              </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Prayer 3</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+            Diocesan priests actually don’t make vows, they make promises. Celibacy for the sake of the kingdom, a promise to pray for the people of God and a promise of obedience to the bishop and his successors. Religious priests, sisters and brothers, take the vows of poverty, chastity and obedience.              </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Prayer 4</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+        Diocesan priests are typically serve a parish in a diocese and serve that same diocese for their entire life. Religious order priests (Jesuits, Franciscans, Benedictines, Dominicans etc...) first live out their lives in their communities, and serve the Church worldwide.        </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Prayer 5</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+  Both sisters and nuns belong to religious communities. However, some men and women are called to a life of hidden contemplation in a monastery, and those we call monks or nuns.      </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>  Prayer 6 </h3>
+                    
+                    <div class="text-info">
+              
+              <p>A man entering out of high school will spend four years studying philosophy and another four studying theology, for a total of 8 years. A young man coming in after college will spend 6 years in formation, 2 in philosophy and 4 in theology.
+     </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+     
+     
+      
+               
+                </div> 
+                <!-- / Collapsed Area -->
+        
+            </div>
+            <!-- /content -->
+            
+            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
+            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a" style="display:none;">
+            
+                <div data-role="navbar" class="nav-glyphish" data-grid="c">
+                    <ul>
+                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
+                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- end -->
+        
+        </div>
+        
+        
+        
+        
+        
+        <!-- *********************************************************
+       	  END PRAYERS
+        ********************************************************* -->
+        
+ 
+       
+        
+
+    <!-- *********************************************************
+       	 BEGIN VIDEO
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="videos" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">Discernment App</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Questions">Videos</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	
+            	<div class="text-info">
+            	
+            	
+            	<div style="display:none;">
+                 <button onclick="window.plugins.childBrowser.showWebPage('http://www.web4uonline.com/louis/index.html'),
+                                        { showLocationBar: true });"> vocation supply company</button>
+              </div>
+              
+               
+               
+               <div class="video-container2s">
+               
+               
+               <iframe height="10000px" width="100%" scrolling="no" name="iframe" frameBorder="0" style="border:0px;" onload="scrolltotop()"  src="../videos.html"></iframe>
+               
+               </div>
+               
+       </div> <!--end text info--> 
+    </div>  <!--end content-->    
+    </div>   <!--end text-box-area--> 
+    
+    
+    
+    
+    <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
+            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a" style="display:none;">
+            
+                <div data-role="navbar" class="nav-glyphish" data-grid="c">
+                    <ul>
+                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
+                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- end -->
+
+    
+    
+    
+    
+    
+    
+    
+    </div>  <!--end page role--->  
+        
+        <!-- *********************************************************
+       	  END VIDEO
+        ********************************************************* -->
+
+
+<!-- *********************************************************
+       	 BEGIN NEWS
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="news" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">News</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Questions">News</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	
+            	<div class="text-info">
+            	
+            	
+              
+               
+               
+               <div class="video-container2s">
+               
+               
+               <iframe border="0" height="10000px" frameborder="0" width="100%" scrolling="no" name="iframe" style="border:0px;" onload="scrolltotop()"  src="../news.html"></iframe>
+               
+               </div>
+               
+       </div> <!--end text info--> 
+    </div>  <!--end content-->    
+    </div>   <!--end text-box-area--> 
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    </div>  <!--end page role--->  
+        
+        <!-- *********************************************************
+       	  END NEWS
+        ********************************************************* -->
+
+
+    
+    
+     <!-- *********************************************************
+       	 SERVICES PAGE BEGIN
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="services" data-theme="a">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="a">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">&nbsp;</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Services">Services</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            	
+                <!-- 1 Column Area -->
+                    <!-- Text Area -->                  
+                    <div class="services-text-info">
+                    <img src="assets/images/Demo/Slide/demo3.jpg" alt="img" class="align-center imgbox">
+                    <p>
+                    <strong>Service One</strong><br/>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis congue ipsum at convallis. Aenean ac scelerisque mauris.</p>
+                    </div>
+                    <!-- / Text Area --> 
+			    <!-- / 1 Column Area -->
+                
+            
+                <!-- 2 Column Area -->
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                    
+                        <!-- Text Area -->                  
+                        <div class="services-text-info">
+                        <img src="assets/images/Demo/Slide/demo3.jpg" alt="img" class="align-center imgbox">
+                        <p>
+                        <strong>Service One</strong><br/>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis congue ipsum at convallis. Aenean ac scelerisque mauris.</p>
+                        </div>
+                        <!-- / Text Area --> 
+                   
+                    </div>
+                    
+                    <div class="ui-block-b">
+                    
+                        <!-- Text Area -->                  
+                        <div class="services-text-info">
+                        <img src="assets/images/Demo/Slide/demo3.jpg" alt="img" class="align-center imgbox">
+                        <p>
+                        <strong>Service Two</strong><br/>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis congue ipsum at convallis. Aenean ac scelerisque mauris.</p>
+                        </div>
+                        <!-- / Text Area --> 
+                   
+                    </div>
+                   
+                </div>
+			    <!-- / 2 Column Area -->
+                
+                <!-- 3 Column Area -->
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                    
+                        <!-- Text Area -->                  
+                        <div class="services-text-info">
+                        <img src="assets/images/Demo/Slide/demo3.jpg" alt="img" class="align-center imgbox">
+                        <p class="text-align-center">
+                        <strong>Service One</strong><br/>
+                        </div>
+                        <!-- / Text Area --> 
+                   
+                    </div>
+                    
+                    <div class="ui-block-b">
+                    
+                        <!-- Text Area -->                  
+                        <div class="services-text-info">
+                        <img src="assets/images/Demo/Slide/demo3.jpg" alt="img" class="align-center imgbox">
+                        <p class="text-align-center">
+                        <strong>Service Two</strong><br/>
+                        </div>
+                        <!-- / Text Area --> 
+                   
+                    </div>
+                    
+                    <div class="ui-block-c">
+                    
+                        <!-- Text Area -->                  
+                        <div class="services-text-info">
+                        <img src="assets/images/Demo/Slide/demo3.jpg" alt="img" class="align-center imgbox">
+                        <p class="text-align-center">
+                        <strong>Service Three</strong><br/>
+                        </div>
+                        <!-- / Text Area --> 
+                   
+                    </div>
+                   
+                    </div>
+              
+			    <!-- / 2 Column Area -->  
+        
+            </div>
+            <!-- /content -->
+            
+        </div>
+        <!-- *********************************************************
+       	  SERVICES PAGE END
+        ********************************************************* -->
+                
+        
+   		<!-- *********************************************************
+       	 BLOG PAGE BEGIN
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="blog" data-theme="a">
+       		<!--header-->
+            <div data-role="header" class="header" data-theme="a">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">&nbsp;</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Blog">Blog</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+        	<!-- Content -->
+            <div data-role="content">		
+                
+                <!--START BLOG POSTS-->
+                <div class="content">
+                
+                    <!--START POST-->
+                    <div class="post">	
+                    
+                        <!--START POST-TITLE-->
+                        <div class="post-title">				
+                        <h2 class="title"><a href="#blog-detail">Duis aute irure dolor in repre hende rit in voluptate.</a></h2>
+                        </div>
+                        <!--END POST-TITLE-->
+                    
+                        <!--START POST-MEDIA-->
+                        <div class="post-media">		
+                        <a href="#"><img src="assets/images/Demo/Slide/demo2.jpg" class="align-left imgbox fixwidth" alt="img"/></a>
+                        </div>
+                        <!--END POST-MEDIA-->
+                    
+                        <!--START POST-INFO-->
+                        <div class="post-info">						
+                        <div class="date"><span class="month">Jun</span><span class="day">27</span><span class="year">2012</span></div>					
+                        <div class="comments"><a href="#"><span>4</span> comments</a></div>							
+                        </div>
+                        <!--END POST-INFO-->	
+                    
+                        <!--START POST-CONTENT -->
+                        <div class="post-content">	
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et. Cras et ligula libero. Quisque quis&hellip;</p>
+                        <p><a href="#blog-detail" class="more-link">Continue reading &rarr;</a></p>
+                        
+                        </div>
+                        <!--END POST-CONTENT -->
+                    
+                    </div>
+                    <!--END POST-->
+                
+                    <!--START POST-->
+                    <div class="post">	
+                    
+                        <!--START POST-TITLE-->
+                        <div class="post-title">				
+                        <h2 class="title"><a href="#blog-detail">Duis aute irure dolor in repre hender it in voluptate.</a></h2>
+                        </div>
+                        <!--END POST-TITLE-->
+                    
+                        <!--START POST-MEDIA-->
+                        <div class="post-media">		
+                        <a href="#"><img src="assets/images/Demo/Slide/demo1.jpg" alt="img" class="align-left imgbox fixwidth" /></a>
+                        </div>
+                        <!--END POST-MEDIA-->
+                        
+                        <!--START POST-INFO-->
+                        <div class="post-info">						
+                        <div class="date"><span class="month">Jun</span><span class="day">27</span><span class="year">2012</span></div>					
+                        <div class="comments"><a href="#blog-detail"><span>4</span> comments</a></div>							
+                        </div>
+                        <!--END POST-INFO-->	
+                        
+                        <!--START POST-CONTENT -->
+                        <div class="post-content">	
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et. Cras et ligula libero. Quisque quis&hellip;</p>
+                        <p><a href="#blog-detail" class="more-link">Continue reading &rarr;</a></p>
+                        
+                        </div>
+                        <!--END POST-CONTENT -->
+                
+                    </div>
+                    <!--END POST-->
+                
+                </div>
+                <!--END BLOG POSTS-->
+                
+                <div class="pagenaviarea clearfix"></div>
+                
+                <!--START PAGENAVI-->	
+                <div class="pagenavi">
+                <span class="pages">1 of 9</span>
+                <span class="current">1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">&rarr;</a>			
+                </div>
+                <!--END PAGENAVI-->	
+           </div><!-- / Content -->
+           
+        </div>
+        <!-- *********************************************************
+       	  BLOG PAGE END
+        ********************************************************* -->
+        
+        
+        <!-- *********************************************************
+       	  BLOG DETAIL PAGE BEGIN
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="blog-detail" data-theme="a">
+            <!--header-->
+            <div data-role="header" class="header" data-theme="a">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">&nbsp;</div>
+            <a href="#blog" class="backBtn">Back</a>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#blog" title="Blog">Blog</a></li>
+                <li><a href="#blog-detail" title="Blog Detail">Blog Detail</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+        
+            <!-- Content -->
+            <div data-role="content" >
+            
+                <!--START BLOG POSTS-->
+                <div class="content">
+                        
+                    <!--START POST-->
+                    <div class="post">	
+                        
+                        
+                        <!--START POST-TITLE-->
+                        <div class="post-title">				
+                            <h2 class="title"><a href="#blog-detail">Duis aute irure dolor in repre hende rit in voluptate.</a></h2>
+                        </div>
+                        <!--END POST-TITLE-->                               	
+                        
+                        <!--START POST-MEDIA-->
+                        <div class="post-media">		
+                            <a href="#"><img src="assets/images/Demo/Slide/demo1.jpg" alt="" width="640" height="359" class="align-left imgbox fixwidth" /></a>
+                        </div>
+                        <!--END POST-MEDIA-->
+                        
+                        <!--START POST-INFO-->
+                        <div class="post-info">						
+                            <div class="date"><span class="month">Jun</span><span class="day">27</span><span class="year">2012</span></div>					
+                            <div class="comments"><a href="#"><span>4</span> comments</a></div>							
+                        </div>
+                        <!--END POST-INFO-->	
+                        
+                        <!--START POST-CONTENT -->
+                        <div class="post-content">	
+                        
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et. Cras et ligula libero. Quisque quis&hellip;</p>
+                            
+                            <p><img src="assets/images/Demo/c2.jpg" width="65" alt="img" class="align-left imgbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et. Cras et ligula libero. Quisque quis&hellip;</p>
+                            
+                        
+                        </div>
+                        <!--END POST-CONTENT -->
+                    
+                    </div>
+                    <!--END POST-->
+                    
+                
+                    <div class="post">
+                    
+                    <h3 class="title">3 comments</h3>		
+                        
+                        <!-- START COMMENT-LIST -->
+                        <ul class="comment-list">
+                
+                            <li class="comment">
+                
+                                <div>
+
+                                    <!-- START COMMENT-WRAP -->
+                                    <div class="comment-wrap">
+                                        <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus.</p>							
+                                    </div>
+                                    <!-- END COMMENT-WRAP -->
+                              </div>
+                              
+                                
+                            </li>
+                
+                            <li class="comment">
+                
+                                <div>
+                                    
+                                    
+                                    <!-- START COMMENT-META -->	
+                                    <div class="comment-meta">
+                                        <p class="author"><a href="#">Kadir Atas</a></p>
+                                        <p class="date">July 23, 2012</p>							
+                                    </div>
+                                    <!-- END COMMENT-META-->
+                                    
+                                    <!-- START COMMENT-WRAP -->	
+                                    <div class="comment-wrap">
+                                        <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus.</p>							
+                                    </div>
+                                    <!-- END COMMENT-WRAP -->
+                              </div>
+                
+                            </li>
+                
+                            <li class="comment">
+                
+                                <div>
+                                    
+                                    
+                                    
+                                    
+                                    <!-- START COMMENT-WRAP -->
+                                    <div class="comment-wrap">
+                                        <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus.</p>							
+                                    </div>
+                                    <!-- END COMMENT-WRAP -->
+                              </div>
+                
+                            </li>
+                
+                        </ul>
+                        <!-- END COMMENT-LIST -->
+                            
+                    </div>
+                    <!--END POST-->
+                </div>
+                <!--END BLOG POSTS-->
+            </div>
+            <!-- / Content -->
+            <div class="clear"></div>
+        </div>
+        <!-- *********************************************************
+       	  BLOG DETAIL PAGE END
+        ********************************************************* -->
+        
+        
+        
+        <!-- *********************************************************
+       	  PRODUCTS PAGE BEGIN
+        ********************************************************* -->
+   		<div data-role="page" class="pages" id="products" data-theme="a">
+            <!--header-->
+            <div data-role="header" class="header" data-theme="a">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">&nbsp;</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Products">Products</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+        
+       		<!-- Content -->
+            <div data-role="content" >
+				<!-- Three column portfolio -->
+						<ul class="product">
+                            <li class="product-three"><a href="#product-details" ><img src="assets/images/Demo/Galleries/product-images/img5.jpg" /><p><strong>Product Name</strong></p></a></li>
+                            <li class="product-three"><a href="#product-details" ><img src="assets/images/Demo/Galleries/product-images/img4.jpg" /><p><strong>Product Name</strong></p></a></li>
+                            <li class="product-three"><a href="#product-details"><img src="assets/images/Demo/Galleries/product-images/img3.jpg" /><p><strong>Product Name</strong></p></a></li>
+                            
+                        </ul>
+                        <!-- / Three Column Portfolio -->
+                        
+                        <div class="clearfix"></div>
+                        
+                        <!-- Two column portfolio -->
+						<ul class="product">
+                            <li class="product-two"><a href="#product-details" ><img src="assets/images/Demo/Galleries/product-images/img2.jpg" /><p><strong>Product Name</strong></p></a></li>
+                            <li class="product-two"><a href="#product-details" ><img src="assets/images/Demo/Galleries/product-images/img6.jpg" /><p><strong>Product Name</strong></p></a></li>                            
+                        </ul>
+                        <!-- / Two Column Portfolio -->
+                        
+                        <div class="clearfix"></div>
+                        
+                     	<!-- One column portfolio -->
+						<ul class="product">
+                            <li class="product-one"><a href="#product-details" ><img src="assets/images/Demo/Galleries/product-images/img1.jpg" /><p><strong>Product Name</strong></p></a></li>
+                        </ul>
+                        <!-- / One Column Portfolio -->
+                        
+                         <div class="clearfix"></div>
+                         
+                         <ul data-role="listview" data-inset="true">
+                           <li><a href="#">Product Category</a></li>
+                           <li><a href="#">Product Category</a></li>
+                           <li><a href="#">Product Category</a></li>
+                         </ul>
+                    </div>
+                    <!-- / Content -->
+                  
+
+            </div>
+            <!-- / Content -->
+            <div class="clear"></div>
+            
+        </div>
+        <!-- *********************************************************
+       	  PRODUCTS PAGE END
+        ********************************************************* -->
+        
+
+        <!-- *********************************************************
+       	  PRODUCT DETAIL PAGE BEGIN
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="product-details" data-theme="a">
+           <!--header-->
+            <div data-role="header" class="header" data-theme="a">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">&nbsp;</div>
+            <a href="#products" class="backBtn">Back</a>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#product" title="Products">Products</a></li>
+                <li><a href="#" title="Product Detail">Product Detail</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+        	
+            <!-- Content -->
+            <div data-role="content" >
+            
+                <!-- Text Box Area -->
+                <div class="text-box-area">
+                     
+                    <img src="assets/images/Demo/Slide/demo3.jpg" alt="img" class="align-center imgbox fixwidth">
+                                         
+                    <div class="text-info">
+                        <p>
+                        <strong>Amazing Navigation Bar!</strong><br/>
+                        You can see samples of navbars code below. Easy to use and develop. And you will see down of window fixed navigation bar use.</p>
+                    </div>
+                    
+                    
+                    
+                    <!-- Navbars -->
+                    <div class="text-info">
+                        <p>
+                        <strong>Two column navbar</strong><br/>
+                        Two column navbar sample</p>
+                    </div>
+                    
+                    <div data-role="navbar" class="nav-glyphish" data-grid="a">
+                        <ul>
+                            <li><a href="#" class="iconsub-white-Tags" data-icon="custom">Products</a></li>
+                            <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                    
+                    <div class="text-info">
+                        <p>
+                        <strong>Three column navbar</strong><br/>
+                        Three column navbar sample</p>
+                    </div>
+                    
+                    
+                    <div data-role="navbar" class="nav-glyphish" data-grid="b">
+                        <ul>
+                            <li><a href="#" class="iconsub-white-Tags" data-icon="custom">Products</a></li>
+                            <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                            <li><a href="tel:00000000" class="iconsub-white-Phone" data-icon="custom">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                    
+                    <div class="text-info">
+                        <p>
+                        <strong>Four column navbar</strong><br/>
+                        Four column navbar sample</p>
+                    </div>
+                                        
+                    <div data-role="navbar" class="nav-glyphish" data-grid="c">
+                        <ul>
+                            <li><a href="#" class="iconsub-white-Tags" data-icon="custom">Products</a></li>
+                            <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                            <li><a href="tel:00000000" class="iconsub-white-Phone" data-icon="custom">Contact</a></li>
+                            <li><a href="https://maps.google.com/" class="iconsub-white-Map" data-icon="custom">Map</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+
+					<div class="text-info">
+                        <p>
+                        <strong>Five column navbar</strong><br/>
+                        Five column navbar sample</p>
+                    </div>
+                                        
+                    <div data-role="navbar" class="nav-glyphish" data-grid="d">
+                        <ul>
+                            <li><a href="#" class="iconsub-white-Tags" data-icon="custom">Products</a></li>
+                            <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                            <li><a href="tel:00000000" class="iconsub-white-Phone" data-icon="custom">Contact</a></li>
+                            <li><a href="#" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                            <li><a href="#" class="iconsub-white-Eye" data-icon="custom">About</a></li>
+                        </ul>
+                    </div>
+        			<!-- /Navbars -->
+                
+                </div>
+                <!-- / Text Box Area -->
+                
+                
+            </div>
+            <!-- / Content -->
+            <div class="clear"></div>
+            
+            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
+                <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a">
+                
+                    <div data-role="navbar" class="nav-glyphish" data-grid="c">
+                        <ul>
+                            <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
+                            <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                            <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+                            <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- end -->
+        </div>
+        <!-- *********************************************************
+       	  PRODUCT DETAIL PAGE END
+        ********************************************************* -->
+        
+        
+   		<!-- *********************************************************
+       	 GALLERY PAGE BEGIN
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="gallery" data-theme="a">
+            <!--header-->
+            <div data-role="header" class="header" data-theme="a">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">&nbsp;</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Gallery">Gallery</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+     	 
+            <!-- Content -->
+            <div data-role="content">		
+                        
+                <!-- Three Column Gallery -->         
+                <ul id="Gallery" class="gallery">
+                    <li class="gallery-three"><a href="assets/images/Demo/Galleries/gallery-images/img1.jpg" rel="external"><img src="assets/images/Demo/Galleries/gallery-images/img1.jpg" alt="Caption"></a></li>
+                    <li class="gallery-three"><a href="assets/images/Demo/Galleries/gallery-images/img2.jpg" rel="external"><img src="assets/images/Demo/Galleries/gallery-images/img2.jpg" alt="Caption"></a></li>
+                    <li class="gallery-three"><a href="assets/images/Demo/Galleries/gallery-images/img3.jpg" rel="external"><img src="assets/images/Demo/Galleries/gallery-images/img3.jpg" alt="Caption"></a></li>
+                </ul>
+                <!-- /Three Column Gallery -->  
+                
+                <!-- Two Column Gallery -->         
+                <ul id="Gallery" class="gallery">
+                    <li class="gallery-two"><a href="assets/images/Demo/Galleries/gallery-images/img4.jpg" rel="external"><img src="assets/images/Demo/Galleries/gallery-images/img4.jpg" alt="Image 001" /></a></li>
+                    <li class="gallery-two"><a href="assets/images/Demo/Galleries/gallery-images/img5.jpg" rel="external"><img src="assets/images/Demo/Galleries/gallery-images/img5.jpg" alt="Image 001" /></a></li>
+                </ul>
+                <!-- /Two Column Gallery -->   
+                
+                <!-- One Column Gallery -->         
+                <ul id="Gallery" class="gallery">
+                    <li class="gallery-one"><a href="assets/images/Demo/Galleries/gallery-images/img6.jpg" rel="external"><img src="assets/images/Demo/Galleries/gallery-images/img6.jpg" alt="Image 001" /></a></li>
+                </ul>
+                <!-- /One Column Gallery -->    
+             
+                <div class="clearfix"></div>
+             
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#">Print Gallery</a></li>
+                    <li><a href="#">Web Gallery</a></li>
+                    <li><a href="#">Brochure Gallery</a></li>
+                </ul>
+                     
+                     
+            </div><!-- /content -->
+        </div>
+        <!-- *********************************************************
+       	  GALLERY PAGE END
+        ********************************************************* -->
+        
+        
+        
+        <!-- *********************************************************
+       	  PORTFOLIO PAGE BEGIN
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="portfolio" data-theme="a">
+            <!--header-->
+            <div data-role="header" class="header" data-theme="a">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">&nbsp;</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Portfolio">Portfolio</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+
+         	<!-- Content -->
+            <div data-role="content" >
+                
+                <!-- Three column portfolio -->
+                <ul id="Portfolio" class="portfolio">
+                    <li class="portfolio-three"><a href="#portfolio-detail" ><img src="assets/images/Demo/Galleries/gallery-images/img5.jpg" /><p><strong>Portfolio Name</strong><br>This is information.</p></a></li>
+                    <li class="portfolio-three"><a href="#portfolio-detail" ><img src="assets/images/Demo/Galleries/gallery-images/img4.jpg" /><p><strong>Portfolio Name</strong><br>This is information.</p></a></li>
+                    <li class="portfolio-three"><a href="#portfolio-detail"><img src="assets/images/Demo/Galleries/gallery-images/img3.jpg" /><p><strong>Portfolio Name</strong><br>This is information.</p></a></li>
+                    
+                </ul>
+                <!-- / Three Column Portfolio -->
+                
+                <div class="clearfix"></div>
+                
+                <!-- Two column portfolio -->
+                <ul id="Portfolio" class="portfolio">
+                    <li class="portfolio-two"><a href="#portfolio-detail" ><img src="assets/images/Demo/Galleries/gallery-images/img2.jpg" /><p><strong>Portfolio Name</strong><br>This is information.</p></a></li>
+                    <li class="portfolio-two"><a href="#portfolio-detail" ><img src="assets/images/Demo/Galleries/gallery-images/img6.jpg" /><p><strong>Portfolio Name</strong><br>This is information.</p></a></li>                            
+                </ul>
+                <!-- / Two Column Portfolio -->
+                
+                <div class="clearfix"></div>
+                
+                <!-- One column portfolio -->
+                <ul id="Portfolio" class="portfolio">
+                    <li class="portfolio-one"><a href="#portfolio-detail" ><img src="assets/images/Demo/Galleries/gallery-images/img1.jpg" /><p><strong>Portfolio Name</strong><br>This is information.</p></a></li>
+                </ul>
+                <!-- / One Column Portfolio -->
+                
+                 <div class="clearfix"></div>
+                 
+                 <ul data-role="listview" data-inset="true">
+                   <li><a href="#">Print Portfolio</a></li>
+                   <li><a href="#">Web Portfolio</a></li>
+                   <li><a href="#">Brochure Portfolio</a></li>
+                 </ul>
+            </div>
+            <!-- / Content -->
+        </div>
+        <!-- *********************************************************
+       	  PORTFOLIO PAGE END
+        ********************************************************* -->
+        
+        
+        <!-- *********************************************************
+       	 PORTFOLIO DETAIL PAGE BEGIN
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="portfolio-detail" data-theme="a">
+           <!--header-->
+            <div data-role="header" class="header" data-theme="a">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">&nbsp;</div>
+            <a href="#portfolio" class="backBtn">Back</a>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#portfolio" title="Portfolio">Portfolio</a></li>
+                <li><a href="#" title="Portfolio Detail">Portfolio Detail</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+        	
+            <!-- Content -->
+            <div data-role="content" >
+            
+                <!-- Text Box Area -->
+                <div class="text-box-area">
+                     
+                    <img src="assets/images/Demo/Slide/demo3.jpg" alt="img" class="align-center imgbox fixwidth">
+                     
+                    
+                                                
+                    <div class="text-info">
+                    	<strong>Did you saw our buttons!</strong>
+                        <p>You can use awesome buttons below;</p>
+                    </div>
+                
+                    <!-- Buttons -->
+                    <div class="text-info">
+                    <strong>Button have 3 different size;</strong>
+                    <p>Sizes are small, medium and big.</p>
+                    <a href="#" class="small tiger">Button</a>
+                    <a href="#" class="medium tiger">Button</a>
+                    <a href="#" class="large tiger">Button</a>
+                    </div>
+                    
+                    <div class="hr-full"></div>
+                    
+                    
+                    <div class="text-info">
+                    <strong>Button Colors</strong>
+                    <p>Button have 5 different color and easy to use;</p>
+                    <a href="#" class="small green tiger">Color</a>
+                    <a href="#" class="small blue tiger">Color</a>
+                    <a href="#" class="small magenta tiger">Color</a>
+                    <a href="#" class="small orange tiger">Color</a>
+                    <a href="#" class="small yellow tiger">Color</a>
+                    </div>
+
+        			<!-- Buttons -->
+                    
+                    <div class="text-info">
+            
+                    <p>Submit Button</p>
+                
+                    <input type="submit" value="Submit Button" />
+                
+                    <p>By default, grouped buttons are presented as a vertical list:</p>
+                    <div data-role="controlgroup">
+                    <a href="index.html" data-role="button">Yes</a>
+                    <a href="index.html" data-role="button">No</a>
+                    <a href="index.html" data-role="button">Maybe</a>
+                    </div>
+                
+                    <p>By adding the <code>data-type="horizontal"</code>
+                    
+                    <p>Horizontal grouped buttons:</p>
+                    <div data-role="controlgroup" data-type="horizontal">
+                    <a href="index.html" data-role="button">Yes</a>
+                    <a href="index.html" data-role="button">No</a>
+                    <a href="index.html" data-role="button">Maybe</a>
+                    </div>
+                
+                    <p>Horizontal grouped buttons with icons:</p>
+                    <div data-role="controlgroup" data-type="horizontal" >
+                    <a href="index.html" data-role="button" data-icon="plus">Add</a>
+                    <a href="index.html" data-role="button" data-icon="delete">Delete</a>
+                    </div>
+                            
+                    <p>Horizontal grouped buttons, icon only:</p>
+                    <div data-role="controlgroup" data-type="horizontal" >
+                    <a href="index.html" data-role="button" data-icon="arrow-u" data-iconpos="notext">Up</a>
+                    <a href="index.html" data-role="button" data-icon="arrow-d" data-iconpos="notext">Down</a>
+                    <a href="index.html" data-role="button" data-icon="delete" data-iconpos="notext">Delete</a>
+                    </div>
+            
+                </div>
+               </div>
+               <!-- / Text Box Area -->
+                
+            </div>
+            <!-- / Content -->
+            <div class="clear"></div>
+            
+        </div>
+            
+        <!-- *********************************************************
+       	  PORTFOLIO DETAIL PAGE END
+        ********************************************************* -->
+        
+
+        
+        <!-- *********************************************************
+       	 TWITTER PAGE BEGIN
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="twitter" data-theme="a">
+            <div data-role="header" class="header" data-theme="a">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">&nbsp;</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Twitter">Twitter</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content -->
+            <div data-role="content" >
+                <!-- Put your username on twitter -->
+                <p><a href="https://twitter.com/webbudesign" class="twitter-follow-button" data-show-count="false">Follow @webbudesign</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+                <!-- Follow end -->
+                                    
+                <!-- Twitter Begin -->
+                <div id="jstwitter">
+                </div>
+                <!-- Twitter End -->
+            </div>
+            <!-- / Content -->           
+        </div>
+        <!-- *********************************************************
+       	  TWITTER PAGE END
+        ********************************************************* -->
+        
+        
+       
+        <!-- *********************************************************
+       	 CONTACT PAGE BEGIN
+        ********************************************************* -->
+        <div data-role="page" class="pages" id="contact" data-theme="a">
+            <!--header-->
+            <div data-role="header" class="header" data-theme="a">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">&nbsp;</div>
+            </div>
+            <!-- /header -->
+        	
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Contact">Contact</a></li>
+            </ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content -->
+            <div data-role="content">	
+            	
+            	<!-- Container -->   
+                <div class="contactarea">
+              
+                    <div class="contact-header">YOUR COMPANY NAME</div>	
+                     
+                    <div class="contact-sub">
+                        <div class="csubtitle">Telephone</div>
+                        <div class="csubinfo">: +78 877 89 8</div>
+                    </div>
+                    
+                    <div class="contact-sub">
+                        <div class="csubtitle">Fax</div>
+                        <div class="csubinfo">: +78 877 89 8</div>
+                    </div>
+                    
+                    <div class="contact-sub">
+                        <div class="csubtitle">Address</div>
+                        <div class="csubinfo">: 9876 St Square Garden</div>
+                    </div>
+                    
+                    <div class="contact-sub">
+                        <div class="csubtitle">E-Mail</div>
+                        <a class="csubinfo" href="mailto:mail@yourdomain.com">: Click here for email us.</a>
+                    </div>
+                    
+                    <div class="contact-sub">
+                        <div class="csubtitle">Google Map</div>
+                        <div class="csubinfo">: <a href="http://maps.google.com/maps?q=London">Click here for map direction.</a></div>
+                    </div>
+                                            
+                </div>
+                <!-- / Contact Area -->
+                <div class="clearfix"></div>
+            </div>
+            <!-- /content -->
+            
+            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
+            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a">
+            
+                <div data-role="navbar" class="nav-glyphish" data-grid="c">
+                    <ul>
+                        <li><a href="http://maps.google.com/maps?q=London" class="iconsub-white-Map" data-icon="custom">Blog</a></li>
+                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- end -->
+                
+        </div>
+        <!-- *********************************************************
+       	  CONTACT PAGE END
+        ********************************************************* -->
+      	
+
+
+
+
+        
+		<!-- Javascripts is down of the page for fast open -->
+        <script src="assets/js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="assets/js/jquery-1.6.4.min.js"></script>
+        <script src="assets/js/jquery.mobile-1.0.1.min.js"></script>
+        <script src="assets/js/vendor/zepto.min.js"></script>
+        <script src="assets/js/helper.js"></script>
+		<script src="assets/js/custom.js"></script>
+        <script src="assets/js/add2home.js" charset="utf-8"></script><!-- Iphone Bubble  -->
+        
+ 
+        
+        
+        
+   		<!--  Photo Swipe Gallery  -->
+		<script src="assets/js/klass.min.js"></script>
+        <script src="assets/js/photoswipe.js"></script>
+        <!--  Photo Swipe Gallery End -->
+        
+        <!--  Photo Swipe Gallery Custom JS  -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var myPhotoSwipe = $("#Gallery a").photoSwipe({ enableMouseWheel: false , enableKeyboard: false });
+            });
+        </script>
+        
+        <!--  Photo Swipe Gallery Custom JS End-->
+        
+        <!-- Slider -->
+        <script src="assets/js/jquery.flexslider.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('.flexslider').flexslider({
+                      slideDirection: "vertical",
+                      animation: "slide",
+                      start: function(slider){
+                        $('.flexslider').css("max-height" , "574px");
+                    }
+                });
+        });
+        </script>
+        <!-- / Slider -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. ( Optional ) -->
+        <script>
+            var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+            g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+            s.parentNode.insertBefore(g,s)}(document,"script"));
+        </script>
+        <!-- Google End -->
+    </body>
+</html>
