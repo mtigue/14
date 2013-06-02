@@ -41,9 +41,9 @@
     
     
     
-<!----------------ICONS---------------------------------->    
+<!----------------ICONS--------- <icon src="icon.png" />------------------------->    
 
-    <icon src="icon.png" />
+   
     
     
    
@@ -66,10 +66,10 @@
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
     
  
-<!-------------------------SPLASH SCREENS---------------->
+<!-------------------------SPLASH SCREENS-----<gap:splash src="/img/splash.png" />----------->
 
    
-    <gap:splash src="/img/splash.png" />
+    
 
     <gap:splash src="res/screen/android/200x320.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="res/screen/android/320x480.png"  gap:platform="android" gap:density="mdpi" />
