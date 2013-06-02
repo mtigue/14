@@ -19,19 +19,11 @@
         Web4u Corporation</author>
 
 
-
-<!--plugins--->
-<gap:plugin name="ChildBrowser" />
-
-<gap:plugin name="GenericPush" /> <!-- latest release -->
-
  
 <!--get access to tall external domains--->
  <access origin="*" />
 
 
- <feature name="http://api.phonegap.com/1.0/device" />
- <feature name="http://plugins.phonegap.com/ChildBrowser/4.0.0" />
  
 
     <preference name="phonegap-version" value="2.7.0" />
@@ -45,11 +37,11 @@
     <preference name="exit-on-suspend" value="true" />
     <preference name="show-splash-screen-spinner" value="true" />
     
-    <preference name="splash-screen-duration" value="4000" />
+    <preference name="splash-screen-duration" value="3000" />
     
     
     
-    
+<!----------------ICONS---------------------------------->    
 
     <icon src="icon.png" />
     
@@ -59,44 +51,75 @@
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
     <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
-    <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" />
-    <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
+    
     <icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
     <icon src="res/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
     <icon src="res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
     <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
+    
+
+    
+    <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" />
+    <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
     <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
     <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
     
+ 
+<!-------------------------SPLASH SCREENS---------------->
+
+   
     <gap:splash src="/img/splash.png" />
 
-
-
-    <gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
-    <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
-    <gap:splash src="res/screen/android/screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" />
-    <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
+    <gap:splash src="res/screen/android/200x320.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/screen/android/320x480.png"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/screen/android/480x800.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/screen/android/720x1280.png" gap:platform="android" gap:density="xhdpi" />
+  
+<!--  hide landscape b/c it was being called even in portrait mode
+    <gap:splash src="res/screen/android/screen-ldpi-landscape.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/screen/android/screen-mdpi-landscape.png"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/screen/android/screen-hdpi-landscape.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/screen/android/screen-xhdpi-landscape.png" gap:platform="android" gap:density="xhdpi" />
+   --> 
+    
+ <!--hide blackberry and windows--   
     <gap:splash src="res/screen/blackberry/screen-225.png"         gap:platform="blackberry" />
-    <gap:splash src="res/screen/ios/screen-iphone-portrait.png"    gap:platform="ios"     width="320" height="480" />
-    <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios"     width="640" height="960" />
-    <gap:splash src="res/screen/ios/screen-ipad-portrait.png"      gap:platform="ios"     width="768" height="1024" />
-    <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
+--->
 
 
+<!-------------APPLE------->
+
+<gap:splash src="res/screen/ios/320x480.png" gap:platform="ios" width="320" height="480" />
+<gap:splash src="res/screen/ios/640x960.png" gap:platform="ios" width="640" height="960" />
+
+<gap:splash src="res/screen/ios/640x1136.png" gap:platform="ios" width="640" height="1136" />
+
+<gap:splash src="res/screen/ios/768x1024" gap:platform="ios" width="768" height="1024" />
+
+<gap:splash src="res/screen/ios/1536x2008.png" gap:platform="ios" width="1536" height="2008" />
 
 
+<!-- IPAD Landscape -->
+<gap:splash src="res/screen/ios/2048x1496.png" gap:platform="ios" width="2048" height="1496" />
+<gap:splash src="res/screen/ios/1024x768.png" gap:platform="ios" width="1024" height="768" />
+
+<!--------END APPLE---------------->
+
+
+<!------plugins--->
+<gap:plugin name="GenericPush"/>
+    <gap:plugin name="ChildBrowser" />
+<!----end plugins---->
 
 
 <!-- If you do not want any permissions to be added to your app, add the
     following tag to your config.xml; you will still have the INTERNET
     permission on your app, which PhoneGap requires. -->
 
-<feature name="http://api.phonegap.com/1.0/notification"/>
+
 <feature name="http://api.phonegap.com/1.0/network"/>
-<feature name="http://api.phonegap.com/1.0/geolocation"/>
-<feature name="http://api.phonegap.com/1.0/GET_TASKS"/>
 
 
 <!-- to enable individual permissions use the following examples --
