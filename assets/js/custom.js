@@ -5,7 +5,7 @@
 // ---------------------------------------------------------------------------------
 //$(document).bind("mobileinit", function(){
 $(document).ready(function () {
-	MBP.startupImage(); // Show startup image. If you want to disable delete this line
+	// MBP.startupImage(); // Show startup image. If you want to disable delete this line
 });
 
 
@@ -31,31 +31,6 @@ $(document).ready(function () {
 			  }
 		});
 		
-		
-		// Delete Code below for stop swipe left & right function.
-		
-			// Swipe left function for menu. If you want you can disable swipe left funtion delete code below.
-			$('#menu, .pages').live("swipeleft", function(){
-				if (menuStatus){	
-				$(".ui-page-active").animate({
-					marginLeft: "0px",
-				  }, 0, function(){menuStatus = false});
-				  }
-			});
-			// Swipe left end
-			
-			
-			// Swipe right function for menu. If you want you can disable swipe right funtion delete code below.
-			$('.pages').live("swiperight", function(){
-				if (!menuStatus){	
-				$(".ui-page-active").animate({
-					marginLeft: "165px",
-				  }, 0, function(){menuStatus = true});
-				  }
-			});
-			// Swipe right end
-			
-		//End Delete Code
 		
 		
 		$('div[data-role="page"]').live('pagebeforeshow',function(event, ui){
