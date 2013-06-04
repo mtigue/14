@@ -27,32 +27,23 @@
         <script src="childbrowser.js"></script>
 
 
+ <!---other JS from template---->
+ <!-- Javascripts is down of the page for fast open -->
+        <script src="assets/js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="assets/js/jquery-1.6.4.min.js"></script>
+        <script src="assets/js/jquery.mobile-1.0.1.min.js"></script>
+        <script src="assets/js/vendor/zepto.min.js"></script>
+        <script src="assets/js/helper.js"></script>
+		<script src="assets/js/custom.js"></script>
+        <script src="assets/js/add2home.js" charset="utf-8"></script><!-- Iphone Bubble  -->
+ <!-------------------------------->
+
 
 	
  
  <script>
 	
 // make collapsible items scroll to top on open
-	   var lastExpanded;
-        $('div.ui-collapsible').live('expand', function() {
-            var $expandable = $(this);
-            // wait until the lastExpanded is collapsed
-            var intervalId = setInterval(function() {
-                if (lastExpanded && lastExpanded.has( ".ui-collapsible-heading-collapsed" )) {
-                    var expandableTop = $expandable.offset().top,
-                    $window = $(window),
-                    targetPos = expandableTop - $window.scrollTop() + $expandable.height();
-                    if (targetPos > $window.height() || expandableTop < $window.scrollTop()) {
-                        $.mobile.silentScroll(expandableTop);
-                    }
-                    clearInterval(intervalId);
-                    lastExpanded = $expandable;
-                } else {
-                    lastExpanded = $expandable;
-                }
-            }, 200);
-        });		
-	</script>
 
 
 
@@ -272,19 +263,6 @@ $(":jqmData(role='collapsible')", $.mobile.activePage).click(function(e) {
 </script>
 
 	
-	<script>
-	
-		
-	$( document ).bind( 'mobileinit', function(){
-  $.mobile.loader.prototype.options.text = "loading";
-  $.mobile.loader.prototype.options.textVisible = false;
-  $.mobile.loader.prototype.options.theme = "a";
-  $.mobile.loader.prototype.options.html = "";
-});
-	
-	
-	</script>
-     
 <!-------------------------------------------------->
         
         <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
@@ -669,17 +647,7 @@ The final identity that God calls us to grow into in our hearts is paternity; to
             </div>
             <!-- /content -->
             
-            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
-            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a" style="display:none;">
             
-                <div data-role="navbar" class="nav-glyphish" data-grid="c">
-                    <ul>
-                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
-                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
-                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
-                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
-                    </ul>
-                </div>
                 
             </div>
             <!-- end -->
@@ -858,18 +826,7 @@ The final identity that God calls us to grow into in our hearts is paternity; to
         
             </div>
             <!-- /content -->
-            
-            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
-            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a" style="display:none;">
-            
-                <div data-role="navbar" class="nav-glyphish" data-grid="c">
-                    <ul>
-                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
-                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
-                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
-                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
-                    </ul>
-                </div>
+           
                 
             </div>
             <!-- end -->
@@ -915,6 +872,7 @@ The final identity that God calls us to grow into in our hearts is paternity; to
                 
                 <h2>Vocation Prayers</h2>
                 
+              
                
                 </div>
                 <!-- / Text Area -->
@@ -927,14 +885,52 @@ The final identity that God calls us to grow into in our hearts is paternity; to
 <!-----------begin question--------------------->             
 
 			  <div data-role="collapsible">
-                    <h3>Prayer 1</h3>
+                    <h3>Litany for vocations</h3>
                     
                     <div class="text-info">
               
               <p>
-              
-              Priests and religious are married in a sense. While giving up a sacramental marriage with a husband or wife, priests and religious share in the same marriage that Jesus lived, giving their lives out of love for him and his people, and becoming spiritual parents to many.
-              </p>
+
+       Lord have mercy, <em>Lord have mercy</em>. <br>Christ have mercy, <em>Christ have mercy</em>.
+			  <br>Lord have mercy, <em>Lord have mercy</em>. <br>Christ, hear us. 
+			  <em>Christ, Graciously hear us</em>.
+             </p>
+
+<p>
+God the Father of heaven, <em>have mercy on us</em>. <br>God the Son, Redeemer of the world, <em>have mercy on us</em>. <br>God the Holy Spirit, <em>have mercy on us</em>. <br>Holy Trinity, one God, <em>have mercy on us</em>.
+
+</p>
+
+<p>
+Holy Mary, Mother of God, <em>pray for us</em>. <br>St. Joseph, Protector of the Church, 
+<em>pray for us</em>. <br>St. Louis, King of France, <em>pray for us</em>. <br>St. Rose Philippine Duchesne, 
+<em>pray for us</em>. <br>St. Vincent de Paul, <em>pray for us</em>. <br>St. John Vianney, patron of priests, 
+<em>pray for us</em>.
+
+</p>
+<p>
+Through your mercy, <em>send workers into your harvest, O Lord</em>. <br>Through 
+your kindness, <br>Through the power of the Holy Sacrifice of the Mass, <em>send workers into your harvest, O Lord</em>
+<br>Through the intercession of all the saints and angels, <em>send workers into your harvest, O Lord</em>
+<br>Through the sanctification of the family, <em>send workers into your harvest, O Lord</em>
+<br>Through parents being generously open to life, <em>send workers into your harvest, O Lord</em>
+<br>Through the example of priests and religious striving for holiness, <em>send workers into your harvest, O Lord</em>
+T<br>hrough a renewed sense of fidelity to our Catholic Faith, <em>send workers into your harvest, O Lord</em>
+
+</p>
+<p>
+Lamb of God, who takes away the sins of the world, <em>spare us O Lord</em>. <br>Lamb of God, who takes away the sins of the world, 
+<em>graciously hear us, O Lord</em>. <br>Lamb of God, who takes away the sins of the world, 
+<em>have mercy on us</em>.
+
+</p>
+
+<p>
+The harvest is abundant but the laborers are few.
+<br>We beg you, Lord; <em>send out laborers for Your harvest</em>.
+
+</p>
+
 
 
 
@@ -948,13 +944,21 @@ The final identity that God calls us to grow into in our hearts is paternity; to
 <!-----------begin question--------------------->
                 
 			  <div data-role="collapsible">
-                    <h3>Prayer 2</h3>
+                    <h3>St. Michael the Archangel</h3>
                     
                     <div class="text-info">
               
               <p>
               
-            Not necessarily. Dating is the discernment of marriage, and we should all see the beauty of that vocation. Jesus speaks about those who give up marriage “for the sake of the kingdom” (Lk 18:29), and it wouldn’t be much of an offering if you didn’t find it attractive.              </p>
+           Saint Michael the Archangel,
+<br>defend us in battle.
+<br>Be our protection against the wickedness and snares of the devil.
+<br>May God rebuke him, we humbly pray;
+<br>and do Thou, O Prince of the Heavenly Host -
+<br>by the Divine Power of God - <br>cast into hell, satan and all the evil spirits,
+			  <br>who roam throughout the world seeking the ruin of souls.
+<br>Amen.
+             </p>
 
                     </div><!--end text info-->                
                   </div><!--end collapsible-->
@@ -965,13 +969,23 @@ The final identity that God calls us to grow into in our hearts is paternity; to
 <!-----------begin question--------------------->
                 
 			  <div data-role="collapsible">
-                    <h3>Prayer 3</h3>
+                    <h3>Prayer of self-abandonment</h3>
                     
                     <div class="text-info">
               
               <p>
               
-            Diocesan priests actually don’t make vows, they make promises. Celibacy for the sake of the kingdom, a promise to pray for the people of God and a promise of obedience to the bishop and his successors. Religious priests, sisters and brothers, take the vows of poverty, chastity and obedience.              </p>
+              <em>Charles Eugene de Foucauld (1858-1916)
+<br></em>
+            </p>
+						<p>
+              
+           			 Father, I abandon myself into your hands; do with me what you will. Whatever you may do. I thank you; I am ready for all, I accept all. Let only your will be done in me, and in all your creatures. I wish no more than this, a Lord.
+            </p>
+						<p>
+              
+           			 Into your hands I commend my soul; I offer it to you with all the love of my heart, for I love you, Lord, and so need to give myself, to surrender myself into your hands, without reserve, and with boundless confidence, for you are my Father.
+            </p>
 
                     </div><!--end text info-->                
                   </div><!--end collapsible-->
@@ -982,12 +996,18 @@ The final identity that God calls us to grow into in our hearts is paternity; to
 <!-----------begin question--------------------->
                 
 			  <div data-role="collapsible">
-                    <h3>Prayer 4</h3>
+                    <h3>Theresa of Avila</h3>
                     
                     <div class="text-info">
               
               <p>
-        Diocesan priests are typically serve a parish in a diocese and serve that same diocese for their entire life. Religious order priests (Jesuits, Franciscans, Benedictines, Dominicans etc...) first live out their lives in their communities, and serve the Church worldwide.        </p>
+      Let nothing disturb you. Let nothing frighten you. All things pass. God does not change. Patience achieves everything. Whoever has God lacks nothing. God alone suffices.       </p>
+
+<p>
+Christ has no body on earth but yours; no hands but yours; no feet but yours. Yours are the eyes through which the compassion of Christ must look out on the world. Yours are the feet with which He is to go about doing good. Yours are the hands with which He is to bless His people.
+</p>
+
+
 
                     </div><!--end text info-->                
                   </div><!--end collapsible-->
@@ -998,12 +1018,16 @@ The final identity that God calls us to grow into in our hearts is paternity; to
 <!-----------begin question--------------------->
                 
 			  <div data-role="collapsible">
-                    <h3>Prayer 5</h3>
+                    <h3>Thou art a priest forever</h3>
                     
                     <div class="text-info">
               
               <p>
-  Both sisters and nuns belong to religious communities. However, some men and women are called to a life of hidden contemplation in a monastery, and those we call monks or nuns.      </p>
+  			<em>Jean-Baptiste Henri Lacordaire, O.P. (1802-1861)
+</em>
+     </p>
+						<p>
+  					  To live in the midst of the world with no desire for its pleasures; to be a member of every family, yet belonging to none; to share all sufferings; to penetrate all secrets, to heal all wounds; to daily go from men to God to offer Him their homage and petitions; to return from God to men to bring them His pardon and hope; to have a heart of fire for charity and a heart of bronze for chastity; to bless and to be blest forever. O God, what a life, and it is yours, O Priest of Jesus Christ!      </p>
 
                     </div><!--end text info-->                
                   </div><!--end collapsible-->
@@ -1014,11 +1038,15 @@ The final identity that God calls us to grow into in our hearts is paternity; to
 <!-----------begin question--------------------->
                 
 			  <div data-role="collapsible">
-                    <h3>  Prayer 6 </h3>
+                    <h3>  Prayer of Generosity </h3>
                     
                     <div class="text-info">
+                    <p>
+                    <em>St. Ignatius Loyola</em>
+                    </p>
               
-              <p>A man entering out of high school will spend four years studying philosophy and another four studying theology, for a total of 8 years. A young man coming in after college will spend 6 years in formation, 2 in philosophy and 4 in theology.
+              <p>Lord Jesus, teach me to be generous;  teach me to serve you as you deserve,  to give and not to count the cost,  to fight and not to heed the wounds,  to toil and not to seek for rest,  to labor and not to seek reward,  except that of knowing that I do your will.
+Amen.   
      </p>
 
                     </div><!--end text info-->                
@@ -1028,6 +1056,42 @@ The final identity that God calls us to grow into in our hearts is paternity; to
 <!------------end question------------------>
 
      
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Prayer of St. Francis</h3>
+                    
+                    <div class="text-info">
+                   
+              <p>Lord, make me an instrument of your peace.
+<br>Where there is hatred, let me sow love;
+<br>where there is injury,pardon;
+where there is doubt, faith;
+<br>where there is despair, hope;
+<br>where there is darkness, light;
+<br>and where there is sadness, joy.
+ 
+     </p>
+
+<p>
+O Divine Master, grant that I may not so much seek
+<br>to be consoled as to console;
+<br>to be understood as to understand;
+<br>to be loved as to love.
+<br>For it is in giving that we receive;
+<br>it is in pardoning that we are pardoned;
+<br>and it is in dying that we are born to eternal life. <br>Amen
+
+</p>
+
+
+
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
      
       
                
@@ -1485,17 +1549,6 @@ function getNews(){
         ********************************************************* -->
 
 
-
- <!---other JS from template---->
- <!-- Javascripts is down of the page for fast open -->
-        <script src="assets/js/vendor/modernizr-2.6.1.min.js"></script>
-        <script src="assets/js/jquery-1.6.4.min.js"></script>
-        <script src="assets/js/jquery.mobile-1.0.1.min.js"></script>
-        <script src="assets/js/vendor/zepto.min.js"></script>
-        <script src="assets/js/helper.js"></script>
-		<script src="assets/js/custom.js"></script>
-        <script src="assets/js/add2home.js" charset="utf-8"></script><!-- Iphone Bubble  -->
- <!-------------------------------->
 
 
 
