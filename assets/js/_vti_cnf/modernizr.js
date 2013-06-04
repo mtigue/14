@@ -9,4 +9,4 @@ vti_syncofs_68.178.246.6\:21/louis:TW|04 Jun 2013 15:36:28 -0000
 vti_cacheddtm:TX|04 Jun 2013 15:32:53 -0000
 vti_filesize:IR|3745
 vti_nexttolasttimemodified:TR|23 May 2013 13:41:53 -0000
-vti_backlinkinfo:VX|14/index.html
+vti_backlinkinfo:VX|

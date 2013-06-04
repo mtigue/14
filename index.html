@@ -27,34 +27,30 @@
 
 	
  
- <!---other JS from template---->
- <!-- Javascripts is down of the page for fast open -->
-        <script src="assets/js/vendor/modernizr-2.6.1.min.js"></script>
-        <script src="assets/js/jquery-1.6.4.min.js"></script>
-        <script src="assets/js/jquery.mobile-1.0.1.min.js"></script>
-        <script src="assets/js/vendor/zepto.min.js"></script>
-        <script src="assets/js/helper.js"></script>
-		<script src="assets/js/custom.js"></script>
-        <script src="assets/js/add2home.js" charset="utf-8"></script><!-- Iphone Bubble  -->
- <!-------------------------------->
- 
- <!------ FUNCTIONS FOR JSON EMBEDS -- mostly buttons ------->
- <script src="http://web4uonline.com/louis/functions.js"></script>
- 
-  
-<!----for toggle codes---->
-<!---toggle code--->
+ <script>
+	
+// make collapsible items scroll to top on open
+	   var lastExpanded;
+        $('div.ui-collapsible').live('expand', function() {
+            var $expandable = $(this);
+            // wait until the lastExpanded is collapsed
+            var intervalId = setInterval(function() {
+                if (lastExpanded && lastExpanded.has( ".ui-collapsible-heading-collapsed" )) {
+                    var expandableTop = $expandable.offset().top,
+                    $window = $(window),
+                    targetPos = expandableTop - $window.scrollTop() + $expandable.height();
+                    if (targetPos > $window.height() || expandableTop < $window.scrollTop()) {
+                        $.mobile.silentScroll(expandableTop);
+                    }
+                    clearInterval(intervalId);
+                    lastExpanded = $expandable;
+                } else {
+                    lastExpanded = $expandable;
+                }
+            }, 200);
+        });		
+	</script>
 
-<link href="http://fonts.googleapis.com/css?family=Lato:400,300italic,300,100italic,100,400italic,700,700italic,900,900italic" rel="stylesheet" />
-	<link href="assets/css/toggle-panel/toggle-panel.css" rel="stylesheet" />
-	<link href="assets/css/toggle-panel/themes/boxed.css" rel="stylesheet" />
-	<link href="assets/css/toggle-panel/themes/minimal.css" rel="stylesheet" />
-	<link href="assets/css/toggle-panel/demo/style.css" rel="stylesheet" />
-
-	<script src="assets/js/modernizr.js"></script>
-
-
-<!-----end toggle code--->
 
 
 
@@ -223,6 +219,8 @@
 <!---------------------------------------END PUSH--------------------------------------->
 
 
+ <!------ FUNCTIONS FOR JSON EMBEDS -- mostly buttons ------->
+ <script src="http://web4uonline.com/louis/functions.js"></script>
 
 
 
@@ -248,6 +246,16 @@
         
  
 <!----scripts to speed things up / scroll to top----------------->
+<script>
+
+$(":jqmData(role='collapsible')", $.mobile.activePage).click(function(e) {
+    if (! $(this).hasClass('ui-collapsible-heading-collapsed')) {
+        $.mobile.silentScroll($(this).offset().top);
+    }
+});
+
+
+</script>
 
        
 <script>
@@ -259,16 +267,6 @@
 	$document.bind("touchstart", function(event){});
 
 </script>
-<script>
-	
-// make collapsible items scroll to top on open
-	$("div.ui-collapsible-set").live("expand", function(e) {
-    var top = $(e.target).offset().top;
-        if ($(window).scrollTop() > top)
-            $(window).scrollTop(top);
-});
-		
-	</script>
 
 	
 	<script>
@@ -304,17 +302,7 @@
     	<!-- Menu Begin -->
         <div id="menu" style="background-images:url('img2/blue.jpg'); background-repeat:repeat; background-color:#0f2c3f;">
         		
-                <!-- Social Links -->
-             
-            	<div class="social-links" style="display:none;">
-            	
-                    <p><a class="twitter" href="#"></a></p>
-                    <p><a class="rss" href="#"></a></p>
-                    <p><a class="facebook" href="#"></a></p>
-                    <p><a class="googleplus" href="#"></a></p>
-                    <p><a class="linkedin" href="#"></a></p>
-                </div>
-                <!-- / Social Links -->
+               
                 
                 
                 <div class="hr-full-black"></div>
@@ -361,11 +349,11 @@
         ********************************************************* -->
         
         
-        <div data-role="page" class="pages" id="home" data-theme="i" style="background-colors:#CCCCCC !important; background-images:url('img2/vm3.jpg'); max-width: 100%; height:auto;">
+        <div data-role="page" class="pages" id="home" data-theme="i">
         
+        <div class="homebg" style="height:100%; left: 0px; top:0px;">
         
-        
-        <div class="homebg" style="height:100%; left: 0px; top:0px;">	
+        	
           
             <!-- Header Begin -->
             <div data-role="header" class="header" data-theme="h">
@@ -414,39 +402,17 @@
             </div>
             
           
-            
-            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
-            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="i" style="display:none;">
-         
-                <div data-role="navbar" class="nav-glyphish" data-grid="a">
-                    <ul>
-                    
-                  
-<li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
-
-                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
-
-                    
-                    <div style="display:none;">
-                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
-                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
-                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
-                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
-                    </div>
-                    
-                    
-                    </ul>
+     
                
-                 </div> </div>
-            </div>
-            <!-- end -->
+            
  
 </div> <!--end full width for background-->   
  
 
+</div><!---end home bg--->
+            
 
-
-       </div>
+       </div><!---end data role page--->
         
         
     
@@ -1515,6 +1481,21 @@ function getNews(){
        	  END CONTACT
         ********************************************************* -->
 
+
+
+ <!---other JS from template---->
+ <!-- Javascripts is down of the page for fast open -->
+        <script src="assets/js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="assets/js/jquery-1.6.4.min.js"></script>
+        <script src="assets/js/jquery.mobile-1.0.1.min.js"></script>
+        <script src="assets/js/vendor/zepto.min.js"></script>
+        <script src="assets/js/helper.js"></script>
+		<script src="assets/js/custom.js"></script>
+        <script src="assets/js/add2home.js" charset="utf-8"></script><!-- Iphone Bubble  -->
+ <!-------------------------------->
+
+
+
         
 		
         
@@ -1582,44 +1563,7 @@ function autoResize(id){
     
     
     
-    <!---more toggle--->
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script src="assets/js/jquery.ajax-retry.js"></script>
-	<script src="assets/js/jquery.ba-resize.js"></script>
-	<script src="assets/js/jquery.toggle-panel.js"></script>
-	<script>
-	
-	
-	$('.toggle-panel')
-	.TogglePanel({
-		ajax: {
-			settings: {
-				timeout: 1000,
-			},
-		},
-		hashWatch: true,
-		pauseMedia: true,
-		saveState: 'session',
-	});
-
-	$('.collapse-all').on('click', function() {
-
-		$('.toggle-panel').TogglePanel('collapse');
-	});
-
-	$('.expand-all').on('click', function() {
-
-		$('.toggle-panel').TogglePanel('expand');
-	});
-
-	$('.toggle-all').on('click', function() {
-
-		$('.toggle-panel').TogglePanel('toggle');
-	});
-	</script>
-	
-<!--end more toggle code-->	
+  
 
     
     
