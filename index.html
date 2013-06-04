@@ -22,10 +22,45 @@
        <!-- phonegap javascripts -->
         <script src="phonegap.js"></script>
         <script src="childbrowser.js"></script>
-		<script src="pushwoosh.js"></script>
+
+
+
+	
  
+ <!---other JS from template---->
+ <!-- Javascripts is down of the page for fast open -->
+        <script src="assets/js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="assets/js/jquery-1.6.4.min.js"></script>
+        <script src="assets/js/jquery.mobile-1.0.1.min.js"></script>
+        <script src="assets/js/vendor/zepto.min.js"></script>
+        <script src="assets/js/helper.js"></script>
+		<script src="assets/js/custom.js"></script>
+        <script src="assets/js/add2home.js" charset="utf-8"></script><!-- Iphone Bubble  -->
+ <!-------------------------------->
+ 
+ <!------ FUNCTIONS FOR JSON EMBEDS -- mostly buttons ------->
+ <script src="http://web4uonline.com/louis/functions.js"></script>
+ 
+  
+<!----for toggle codes---->
+<!---toggle code--->
+
+<link href="http://fonts.googleapis.com/css?family=Lato:400,300italic,300,100italic,100,400italic,700,700italic,900,900italic" rel="stylesheet" />
+	<link href="assets/css/toggle-panel/toggle-panel.css" rel="stylesheet" />
+	<link href="assets/css/toggle-panel/themes/boxed.css" rel="stylesheet" />
+	<link href="assets/css/toggle-panel/themes/minimal.css" rel="stylesheet" />
+	<link href="assets/css/toggle-panel/demo/style.css" rel="stylesheet" />
+
+	<script src="assets/js/modernizr.js"></script>
 
 
+<!-----end toggle code--->
+
+
+
+	
+
+ 
 <!--------------------------------------FOR PUSH------------------------------------->
 	
    <!--<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>-->
@@ -226,7 +261,7 @@
 </script>
 <script>
 	
-	// make collapsible items scroll to top on open
+// make collapsible items scroll to top on open
 	$("div.ui-collapsible-set").live("expand", function(e) {
     var top = $(e.target).offset().top;
         if ($(window).scrollTop() > top)
@@ -257,7 +292,7 @@
         -->
         
 </head>
-    <body style="height:100%;">
+    <body>
     
 
 <!--
@@ -326,11 +361,11 @@
         ********************************************************* -->
         
         
-        <div data-role="page" class="pages" id="home" data-theme="i" style="background-colors:#CCCCCC !important; background-images:url('img2/vm.jpg'); max-width: 100%; height:auto;" style="height:1200px !important; ">
+        <div data-role="page" class="pages" id="home" data-theme="i" style="background-colors:#CCCCCC !important; background-images:url('img2/vm3.jpg'); max-width: 100%; height:auto;">
         
         
         
-        <div class="homebg" style="height:100%;">	
+        <div class="homebg" style="height:100%; left: 0px; top:0px;">	
           
             <!-- Header Begin -->
             <div data-role="header" class="header" data-theme="h">
@@ -366,7 +401,10 @@
             
             Archdiocese of St. Louis Vocation Discernment App
             <div style="height:1em"></div>
-            
+          
+
+<a href="#" class="showMenu">Show Menu</a><br><br>
+  
          
             <a href="#" class="showMenu">
              <button class="showMenu">Get Started</button>
@@ -449,6 +487,14 @@
             	<img src="img2/library.jpg" alt="img" class="align-center imgbox fixwidth">
                 
                 <div class="text-info" style="height:100%;">
+                
+                
+                
+                
+  
+        
+                
+                
                 
                 <h2>Vocation Basics</h2>
                 
@@ -1254,54 +1300,54 @@ The final identity that God calls us to grow into in our hearts is paternity; to
             	<div class="text-info">
             	
             	
- <!------------------------refresh iframes---------------------->
+ <!----------------------AJAX REQUEST AND DISPLAY--------------------->
+
+
 <script type="text/javascript">
-function refreshVideos()
-{
-var x=document.getElementById("iframeVideo").src;
-document.getElementById("iframeVideo").src=x;
+function getVideos(){
+	var resultsVideos = document.getElementById("resultsVideos");
+    var hr = new XMLHttpRequest();
+    hr.open("GET", "http://web4uonline.com/louis/videos.php", true);
+    hr.setRequestHeader("Content-type", "application/json", true);
+    
+     
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var data = JSON.parse(hr.responseText);
+			resultsVideos.innerHTML = "";
+			for(var obj in data){
+			resultsVideos.innerHTML += data[obj].data;
+	
+	//		results.innerHTML += data[obj].user+" is "+data[obj].age+" and lives in "+data[obj].country+"<hr />";
+
+			}
+	    }
+    }
+    
+  
+    hr.send(null);
+    results.innerHTML = "requesting...";
 }
 </script>
-<!-----------------------------end news------------------------>
-            	
-            	
-            	
-      
-              <button data-icon="refresh" onclick="refreshVideos()">Update Videos</button>
+       
+
+<button data-icon="refresh" onclick="getVideos()">Update Videos</button>
                
-               
-               <div class="video-container2s">
-               
-               
-               <iframe id="iframeVideo" height="10000px" width="100%" scrolling="no"  frameBorder="0" style="border:0px;" onload="scrolltotop()"  src="http://www.web4uonline.com/louis/videos.php"></iframe>
-               
-               </div>
+<div id="resultsVideos"></div>
+
+<script type="text/javascript">getVideos();</script>
+         
+
+<!----------------------END  AJAX REQUEST AND DISPLAY--------------------->
+
+ 
+ 
+ 
+      </div>
                
        </div> <!--end text info--> 
     </div>  <!--end content-->    
     </div>   <!--end text-box-area--> 
-    
-    
-    
-    
-    <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
-            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a" style="display:none;">
-            
-                <div data-role="navbar" class="nav-glyphish" data-grid="c">
-                    <ul>
-                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
-                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
-                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
-                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
-                    </ul>
-                </div>
-                
-            </div>
-            <!-- end -->
-
-    
-    
-    
     
     
     
@@ -1316,6 +1362,10 @@ document.getElementById("iframeVideo").src=x;
 <!-- *********************************************************
        	 BEGIN NEWS
         ********************************************************* -->
+ 
+
+        
+        
         <div data-role="page" class="pages pagesbg" id="news" data-theme="i">
         	
             <!-- Header Begin -->
@@ -1340,32 +1390,53 @@ document.getElementById("iframeVideo").src=x;
             	
             	<div class="text-info">
             	
+            	
+            	
+     
 
- <!------------------------refresh iframes---------------------->
+     	
+            	
+            	
+            	
+<!----------------------AJAX REQUEST AND DISPLAY--------------------->
+
+
 <script type="text/javascript">
-function refresh()
-{
-var x=document.getElementById("iframeNews").src;
-document.getElementById("iframeNews").src=x;
+function getNews(){
+	var resultsNews = document.getElementById("resultsNews");
+    var hr = new XMLHttpRequest();
+    hr.open("GET", "http://web4uonline.com/louis/news.php", true);
+    hr.setRequestHeader("Content-type", "application/json", true);
+    
+     
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var data = JSON.parse(hr.responseText);
+			resultsNews.innerHTML = "";
+			for(var obj in data){
+			resultsNews.innerHTML += data[obj].data;
+	
+	//		results.innerHTML += data[obj].user+" is "+data[obj].age+" and lives in "+data[obj].country+"<hr />";
+
+			}
+	    }
+    }
+    
+  
+    hr.send(null);
+    results.innerHTML = "requesting...";
 }
 </script>
-<!-----------------------------end news------------------------>
+       
 
+<button data-icon="refresh" onclick="getNews()">Update News Stories</button>
+               
+<div id="resultsNews"></div>
 
+<script type="text/javascript">getNews();</script>
+         
 
-
-              
-               
-               <button data-icon="refresh" onclick="refresh()">Update News Stories</button>
-               
-               <div class="video-container2s">
-               
-               
-               <iframe id="iframeNews" border="0" height="10000px" frameborder="0" width="100%" scrolling="no" style="border:0px;" onloads="scrolltotop()"  src="http://www.web4uonline.com/louis/news.php"></iframe>
-               
-               
-               
-
+<!----------------------END  AJAX REQUEST AND DISPLAY--------------------->
                
                
                
@@ -1445,14 +1516,7 @@ document.getElementById("iframeNews").src=x;
         ********************************************************* -->
 
         
-		<!-- Javascripts is down of the page for fast open -->
-        <script src="assets/js/vendor/modernizr-2.6.1.min.js"></script>
-        <script src="assets/js/jquery-1.6.4.min.js"></script>
-        <script src="assets/js/jquery.mobile-1.0.1.min.js"></script>
-        <script src="assets/js/vendor/zepto.min.js"></script>
-        <script src="assets/js/helper.js"></script>
-		<script src="assets/js/custom.js"></script>
-        <script src="assets/js/add2home.js" charset="utf-8"></script><!-- Iphone Bubble  -->
+		
         
  <!---iframe adjust to content size---->
  <script language="JavaScript">
@@ -1514,4 +1578,56 @@ function autoResize(id){
         </script>
         <!-- Google End -->
     </body>
+    
+    
+    
+    
+    <!---more toggle--->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="assets/js/jquery.ajax-retry.js"></script>
+	<script src="assets/js/jquery.ba-resize.js"></script>
+	<script src="assets/js/jquery.toggle-panel.js"></script>
+	<script>
+	
+	
+	$('.toggle-panel')
+	.TogglePanel({
+		ajax: {
+			settings: {
+				timeout: 1000,
+			},
+		},
+		hashWatch: true,
+		pauseMedia: true,
+		saveState: 'session',
+	});
+
+	$('.collapse-all').on('click', function() {
+
+		$('.toggle-panel').TogglePanel('collapse');
+	});
+
+	$('.expand-all').on('click', function() {
+
+		$('.toggle-panel').TogglePanel('expand');
+	});
+
+	$('.toggle-all').on('click', function() {
+
+		$('.toggle-panel').TogglePanel('toggle');
+	});
+	</script>
+	
+<!--end more toggle code-->	
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </html>

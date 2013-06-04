@@ -5,7 +5,7 @@
 // ---------------------------------------------------------------------------------
 //$(document).bind("mobileinit", function(){
 $(document).ready(function () {
-	// MBP.startupImage(); // Show startup image. If you want to disable delete this line
+	 // Show startup image. If you want to disable delete this line
 });
 
 
@@ -31,6 +31,9 @@ $(document).ready(function () {
 			  }
 		});
 		
+		
+		
+
 		
 		
 		$('div[data-role="page"]').live('pagebeforeshow',function(event, ui){
