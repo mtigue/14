@@ -55,7 +55,7 @@
 	
    <!--<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>-->
         
-        <script type="text/javascript" charset="utf-8" src="jquery_1.5.2.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery_1.6.4.min.js"></script>
         <script type="text/javascript" src="PushNotification.js"></script>
         <script src="pushwoosh.js" type="text/javascript"></script>
         
@@ -250,6 +250,18 @@ $(":jqmData(role='collapsible')", $.mobile.activePage).click(function(e) {
 
 
 </script>
+
+<script>
+	
+	// make collapsible items scroll to top on open
+	$("div.ui-collapsible-set").live("expand", function(e) {
+    var top = $(e.target).offset().top;
+        if ($(window).scrollTop() > top)
+            $(window).scrollTop(top);
+});
+		
+	</script>
+
 
        
 <script>
@@ -1549,62 +1561,7 @@ function getNews(){
         ********************************************************* -->
 
 
-
-
-
-        
-		
-        
- <!---iframe adjust to content size---->
- <script language="JavaScript">
-<!--
-function autoResize(id){
-    var newheight;
-    var newwidth;
-
-    if(document.getElementById){
-        newheight=document.getElementById(id).contentWindow.document .body.scrollHeight;
-        newwidth=document.getElementById(id).contentWindow.document .body.scrollWidth;
-    }
-
-    document.getElementById(id).height= (newheight) + "px";
-    document.getElementById(id).width= (newwidth) + "px";
-}
-//-->
-</script>
- 
- 
-
-        
-        
-   		<!--  Photo Swipe Gallery  -->
-		<script src="assets/js/klass.min.js"></script>
-        <script src="assets/js/photoswipe.js"></script>
-        <!--  Photo Swipe Gallery End -->
-        
-        <!--  Photo Swipe Gallery Custom JS  -->
-        <script type="text/javascript">
-            $(document).ready(function(){
-                var myPhotoSwipe = $("#Gallery a").photoSwipe({ enableMouseWheel: false , enableKeyboard: false });
-            });
-        </script>
-        
-        <!--  Photo Swipe Gallery Custom JS End-->
-        
-        <!-- Slider -->
-        <script src="assets/js/jquery.flexslider.js"></script>
-        <script>
-        $(document).ready(function() {
-            $('.flexslider').flexslider({
-                      slideDirection: "vertical",
-                      animation: "slide",
-                      start: function(slider){
-                        $('.flexslider').css("max-height" , "574px");
-                    }
-                });
-        });
-        </script>
-        <!-- / Slider -->
+	
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. ( Optional ) -->
         <script>

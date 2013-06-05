@@ -6,7 +6,7 @@
         
         
         
-    <name>St. Louis Vocations</name> 
+    <name>STL Vocations - Discernment App</name> 
 
     <description>
      A discernment resource for young men discerning their vocation. Includes prayers, questions, videos, scripture, reflections, and news. 
@@ -21,9 +21,6 @@
 
 
  <feature name="http://api.phonegap.com/1.0/device" />
-
- 
- 
 
    <preference name="phonegap-version" value="2.7.0" />
     <preference name="orientation"      value="default" />

@@ -45,15 +45,7 @@ $(document).ready(function () {
 			// Swipe left end
 			
 			
-			// Swipe right function for menu. If you want you can disable swipe right funtion delete code below.
-			$('.pages').live("swiperight", function(){
-				if (!menuStatus){	
-				$(".ui-page-active").animate({
-					marginLeft: "165px",
-				  }, 0, function(){menuStatus = true});
-				  }
-			});
-			// Swipe right end
+			
 			
 		//End Delete Code
 		
