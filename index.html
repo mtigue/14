@@ -1195,24 +1195,7 @@ O Divine Master, grant that I may not so much seek
             	<div class="text-info">
             	
             	
-  <!----------------------AJAX REQUEST AND DISPLAY---------------------
-
-
-<script type="text/javascript">
-function getVideos() {   
-   $.getJSON ('http://web4uonline.com/louis/videos.php', function(data) {
-  document.getElementById("resultsVideos").innerHTML=data.data;   
-		}  )
-  }
-</script>
-
-<button onclick="getVideos()" value="Update Videos">Update News</button>
-
-<script type="text/javascript">getVideos();</script>
-
-         
-
-<!----------------------END  AJAX REQUEST AND DISPLAY--------------------->
+  <!----------------------AJAX REQUEST AND DISPLAY--------------------->
 
 <script>
 
@@ -1225,8 +1208,6 @@ function getVideos() {
 //  data: "", 
    dataType: "json",
   success: function(data) 
-  
-  
   {
  document.getElementById("resultsVideos").innerHTML=data.data;  
   }
@@ -1238,10 +1219,16 @@ function getVideos() {
 
 </script>  
 
+<!-------AJAX END----->
+
 <button onclick="getVideos()" value="Update Videos">Update Videos</button>
 <script type="text/javascript">getVideos();</script>
 
-  <div id="resultsVideos">getting data...</div> 
+  <div id="resultsVideos">getting data...internet connection required</div> 
+ 
+ 
+ 
+ 
  
       </div>
                
@@ -1298,33 +1285,43 @@ function getVideos() {
             	
             	
             	
-<!----------------------AJAX REQUEST AND DISPLAY---------------------
+<!----------------------AJAX REQUEST AND DISPLAY--------------------->
 
-<script type="text/javascript">
-function getNews() {   
-   $.getJSON ('http://web4uonline.com/louis/news.php', function(data) {
-  document.getElementById("resultsNews").innerHTML=data.data;   
-		}  )
+<script>
+
+function getNews() { 
+
+ $.ajax({
+  type: "GET",
+  cache: false, 	
+  url: "http://web4uonline.com/louis/news.php",
+//  data: "", 
+   dataType: "json",
+  success: function(data) 
+  {
+ document.getElementById("resultsNews").innerHTML=data.data;  
   }
-</script>
+  
+  
+});
+
+}
+
+</script>  
+
+<!----------------------END  AJAX REQUEST AND DISPLAY--------------------->
+
 
 <button onclick="getNews()" value="Update News">Update News</button>
 
 <script type="text/javascript">getNews();</script>
 
-<div id="resultsNews">getting data...</div>
+<div id="resultsNews">getting data...internet connection required</div>
 
 
-   
+        
 
 
-               
-
-
-
-         
-
-<!----------------------END  AJAX REQUEST AND DISPLAY--------------------->
                
                
                
