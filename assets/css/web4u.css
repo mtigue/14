@@ -115,19 +115,3 @@ filter:alpha(opacity=98); /* For IE8 and earlier */
 .text-info ol {margin:0px 0px 0px 0px !Important; }
 
 
-.video-container2 {
-    position: relative;
-    padding-bottom: 99%;
-    padding-top: 20px; height:0; overflow: hidden !important;
-}
-
-.video-container2 iframe,
-.video-container2 object,
-.video-container2 embed 
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
