@@ -1210,13 +1210,38 @@ function getVideos() {
 
 <script type="text/javascript">getVideos();</script>
 
-<div id="resultsVideos">getting data...</div>
          
 
 <!----------------------END  AJAX REQUEST AND DISPLAY--------------------->
 
- 
- 
+<script>
+
+function getVideos() { 
+
+ $.ajax({
+  type: "GET",
+  cache: false, 	
+  url: "http://web4uonline.com/louis/videos.php",
+//  data: "", 
+   dataType: "json",
+  success: function(data) 
+  
+  
+  {
+ document.getElementById("resultsVideos").innerHTML=data.data;  
+  }
+  
+  
+});
+
+}
+
+</script>  
+
+<button onclick="getVideos()" value="Update Videos">Update Videos</button>
+<script type="text/javascript">getVideos();</script>
+
+  <div id="resultsVideos">getting data...</div> 
  
       </div>
                
