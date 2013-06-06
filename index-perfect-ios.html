@@ -39,7 +39,7 @@
         
 
 
- <!------ FUNCTIONS FOR JSON EMBEDS -- mostly buttons -------
+ <!------ FUNCTIONS FOR JSON EMBEDS -- mostly buttons ------->
  <script src="http://web4uonline.com/louis/functions.js"></script>
 
  <!---other JS from template---->
@@ -1195,7 +1195,7 @@ O Divine Master, grant that I may not so much seek
             	<div class="text-info">
             	
             	
-  <!----------------------AJAX REQUEST AND DISPLAY---------------------
+  <!----------------------AJAX REQUEST AND DISPLAY--------------------->
 
 
 <script type="text/javascript">
@@ -1273,7 +1273,7 @@ function getVideos() {
             	
             	
             	
-<!----------------------AJAX REQUEST AND DISPLAY---------------------
+<!----------------------AJAX REQUEST AND DISPLAY--------------------->
 
 <script type="text/javascript">
 function getNews() {   
@@ -1290,7 +1290,42 @@ function getNews() {
 <div id="resultsNews">getting data...</div>
 
 
-   
+<!--
+
+<script type="text/javascript">
+function getNews(){
+	var resultsNews = document.getElementById("resultsNews");
+    var hr = new XMLHttpRequest();
+    hr.open("GET", "http://web4uonline.com/louis/news2.json", true);
+    hr.setRequestHeader("Content-type", "application/json", true);
+    
+    alert(data.firstName);
+     
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var data = JSON.parse(hr.responseText);
+			resultsNews.innerHTML = "";
+			for(var obj in data){
+	//		resultsNews.innerHTML += data[obj].data;
+	
+			 alert(data.firstName);
+	
+	//		results.innerHTML += data[obj].user+" is "+data[obj].age+" and lives in "+data[obj].country+"<hr />";
+
+			}
+	    }
+    }
+    
+  
+    hr.send(null);
+    results.innerHTML = "requesting...";
+}
+</script>
+
+<script type="text/javascript">getNews();</script>
+
+
+  -->     
 
 
                
