@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * Add to Homescreen v2.0.1 ~ Copyright (c) 2012 Matteo Spinelli, http://cubiq.org
  * Released under MIT license, http://cubiq.org/license
  */
@@ -23,7 +23,7 @@ var addToHome = (function (w) {
 		closeTimeout,
 
 		options = {
-			autostart: true,			// Automatically open the balloon
+			autostart: false,			// Automatically open the balloon
 			returningVisitor: false,	// Show the balloon to returning visitors only (setting this to true is HIGHLY RECCOMENDED)
 			animationIn: 'drop',		// drop || bubble || fade
 			animationOut: 'fade',		// drop || bubble || fade
