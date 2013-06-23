@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>St. Louis Vocations</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta content="initial-scale=1.0, user-scalable=no" name="viewport">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />	
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="description" content="">
+        
+
+
+ <!-- CSS Files -->
+        <link rel="stylesheet" href="assets/css/jquery.mobile.structure-1.0.1.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/jquery.mobile.1.0.1.min.css" />
+        <link rel="stylesheet" href="assets/css/add2home.css"><!-- Iphone Bubble  -->
+        <link rel="stylesheet" href="assets/css/icons/icons.css" type="text/css" >
+        <link rel="stylesheet" href="assets/css/icons/nav-icons.css" type="text/css" >
+		<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css" > <!-- Theme Style Sheet File -->
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="assets/css/photoswipe.css">
+	    <link rel="stylesheet" type="text/css" href="assets/css/icons/nav-icons-black.css"> 
+        
+        <!--web4u css-->
+        <link rel="stylesheet" href="assets/css/web4u.css">
+        
+
+
+       <!-- phonegap javascripts -->
+        <script src="phonegap.js"></script>
+        
+        
+        
+
+
+ <!------ FUNCTIONS FOR JSON EMBEDS -- mostly buttons ------->
+ <script src="http://web4uonline.com/louis/functions.js"></script>
+
+ <!---other JS from template---->
+ <!-- Javascripts is down of the page for fast open -->
+         <script src="assets/js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="assets/js/jquery-1.6.4.min.js"></script>
+        <script src="assets/js/jquery.mobile-1.0.1.min.js"></script>
+        <script src="assets/js/vendor/zepto.min.js"></script>
+        <script src="assets/js/helper.js"></script>
+		 <script src="assets/js/custom.js"></script>
+    <!--    <script src="assets/js/add2home.js" charset="utf-8"></script><!-- Iphone Bubble  -->
+ <!-------------------------------->
+
+  
+        
+        
+       
+ 
+<!----scripts to speed things up / scroll to top----------------->
+<script>
+
+$(":jqmData(role='collapsible')", $.mobile.activePage).click(function(e) {
+    if (! $(this).hasClass('ui-collapsible-heading-collapsed')) {
+        $.mobile.silentScroll($(this).offset().top);
+    }
+});
+
+
+</script>
+
+<script>
+	
+	// make collapsible items scroll to top on open
+	$("div.ui-collapsible-set").live("expand", function(e) {
+    var top = $(e.target).offset().top;
+        if ($(window).scrollTop() > top)
+            $(window).scrollTop(top);
+});
+		
+	</script>
+
+
+       
+<script>
+	
+	//attempts to speed things up
+	$.mobile.defaultPageTransition   = 'none';
+	$.mobile.defaultDialogTransition = 'none';
+	$.mobile.buttonMarkup.hoverDelay = 0;
+	$document.bind("touchstart", function(event){});
+
+</script>
+
+	
+<!-------------------------------------------------->
+        
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
+        
+</head>
+    <body>
+    
+
+<!--
+////////////////////////////////////////////////////////////////////////////////
+								BEGIN MENU
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+        
+    	<!-- Menu Begin -->
+    	
+    	
+    	
+    	
+
+    	
+    	
+    	
+    	
+    	
+        <div id="menu" style="background-images:url('img2/blue.jpg'); background-repeat:repeat; background-color:#0f2c3f; display:none; margin:0px 0px 0px 0px;">
+        		
+               
+                
+                
+                <div class="hr-full-black"></div>
+            
+            
+            
+           		<ul>
+            	
+                    <li><a href="#home" class="contentLink" data-transition="none">Home Page <span class="icon"></span></a></li>
+                    
+                    
+                     <li><a href="#basics" class="contentLink" data-transition="none">Vocation Basics<span class="icon"></span></a></li>
+                    
+                    <li><a href="#questions" class="contentLink" data-transition="none">Questions<span class="icon"></span></a></li>
+                    
+                    <li><a href="#prayers" class="contentLink" data-transition="none">Prayers<span class="icon"></span></a></li>
+                   
+                   <li><a href="#scriptures" class="contentLink" data-transition="none">Scriptures<span class="icon"></span></a></li>
+                   
+                   
+                     
+                     <li><a href="#videos" class="contentLink" data-transition="none">Videos<span class="icon"></span></a></li>
+                    
+                    <li><a href="#news"  class="contentLink" data-transition="none">News & Events<span class="icon"></span></a></li>
+                    
+                    
+                                     
+                    <li><a href="#contact"  class="contentLink" data-transition="none">Contact<span class="icon"></span></a></li>
+                    
+                    <li><a href="" onclick="stayLoop()"  class="contentLink" data-transition="none">Join E-mail List<span class="icon"></span></a></li>
+
+					 <li><a href="#app"  class="contentLink" data-transition="none">About the App<span class="icon"></span></a></li>
+
+					
+
+<script>                    
+                 function contactSignup()
+{
+window.plugins.childBrowser.showWebPage('http://www.web4uonline.com/louis/14/signup.html',
+                                       { showNavigationBar: true }    );
+}
+   
+</script>   
+                   
+
+               
+               </ul>
+            
+            
+            
+          
+            
+            
+            
+        </div>
+        <!-- /Menu -->
+        
+        
+        
+        
+        <!-- *********************************************************
+       	 HOME PAGE BEGIN
+        ********************************************************* -->
+        
+        
+        
+        
+        
+        
+        <div data-role="page" class="pages" id="home" data-theme="i">
+        
+        <div class="homebg" style="height:100%; left: 0px; top:0px;">
+        
+ 
+
+
+
+       	
+          
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            
+     
+
+            
+            
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">STL Vocations</div>
+            
+            
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Home">Home</a></li>
+                
+                
+              <div class="crest">&nbsp;</div>
+                
+           
+</ul>
+            <!-- / breadcrumb-->
+            
+            
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            
+            
+     
+               
+                
+                
+            
+            
+            <div class="homebox">
+            
+            
+            
+            Archdiocese of St. Louis Vocation Discernment App
+            <div style="height:1em"></div>
+          
+
+
+  
+         
+            <a href="#" class="showMenu">
+             <button class="showMenu">Get Started</button>
+</a>
+          
+            
+            </div>
+            
+          
+     
+               
+            
+ 
+</div> <!--end full width for background-->   
+ 
+
+</div><!---end home bg--->
+            
+
+       </div><!---end data role page--->
+        
+        
+    
+        <!-- *********************************************************
+       	 HOME PAGE END
+        ********************************************************* -->
+        
+        
+            
+       
+        
+        
+        
+        <!-- *********************************************************
+       	VOCATION BASICS
+        ********************************************************* -->
+        <div data-role="page" class="pages pagesbg" id="basics" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">STL Vocations</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="About Us">Vocation Basics</a></li>
+            <div class="crest">&nbsp;</div>
+</ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	<img src="img2/library.jpg" alt="img" class="align-center imgbox fixwidth">
+                
+                <div class="text-info" style="height:100%;">
+                
+                
+                
+                
+  
+        
+                
+                
+                
+                <h2>Vocation Basics</h2>
+                
+                <p>
+                Here you will find introductory information about the true meaning of a vocation, the role of discernment, and the universal call to holinesss.</p>
+
+                
+           
+               
+              
+
+                
+                
+                
+                </div><!--text info-->
+                </div>
+                <!-- / Text Area -->
+                
+                <div class="clearfix"></div>
+                
+                
+                
+               
+                
+                <!-- Collapsed Area -->
+                <div data-role="collapsible-set">
+                  <div data-role="collapsible">
+                    <h3>What does the word Vocation mean?</h3>
+                    
+                    <div class="text-info">
+               
+                  
+  <p>
+  The word vocation comes from the latin vocare which means “to call”. It is important for us to know two fundamental things about vocations. First, everyone has a vocation. God calls each of His sons and daughters to know, love and serve Him in this life so as to live with Him forever in heaven. Second, a vocation is not a job, it is an identity and pathway for us to conform ourselves ever more closely to Jesus Christ. Whether it be marriage, holy orders, consecrated life, or a dedicated single life, the end is the same; holiness.
+  </p>
+
+
+
+
+                    </div><!--end text info-->
+                    
+                  </div><!--end collapsible-->
+                  
+                  
+                  
+                  <div data-role="collapsible">
+                    <h3>What does Discernment mean?</h3>
+                    
+                    <div class="text-info">
+               
+                  
+      <p>
+      How many times have you been really hungry at a restaurant and looked at the menu and thought to yourself 
+	  "It all looks so good, I’m having trouble deciding?" This is discernment. Discernment is not a choice between good or evil (that’s temptation). Rather, it is literally a “cutting away” until we come to know what is best. Through prayer, spiritual direction and good advice, we are all called to discern the menu of vocations that God has before us, until we discover what is best according to God’s plan for our lives.
+      </p>
+
+
+
+                    </div><!---end text info-->
+                    
+                  </div><!---end collapsible-->
+
+                  
+                  
+                  <div data-role="collapsible" data-collapsed="true">
+                  
+                  <h3>How do I discern?</h3>
+                  
+  <div class="text-info">
+ <p>
+There are some very simple steps that everyone should follow in discernment.                    
+    
+</p>
+
+<ol>
+<li><strong>Prayer<br></strong>God does not call us on our cell phones or friend us on Facebook. Rather, He speaks to us in the depths of our hearts, through simple promptings, stirrings and desires. Only through time spent in quiet prayer can we pay better attention to the the whisperings of God in our hearts.</li>
+
+
+<li><strong>Scripture</strong><br>
+St. Jerome once said “Ignorance of scripture is ignorance of Christ”. Spending a few minutes each day reflecting on the living word of God found in sacred scripture dramatically impacts our faith life. God still speaks to us through scripture and can use His divine word to guide us in our discernment.</li>
+
+
+<li>
+<strong>Spiritual Direction</strong><br>
+We are not in this alone! Part of discernment is opening ourselves up to the gift of Council. A spiritual director is not someone who tells you what to do, but rather acts as an outside observer as to what it appears God is doing in your life. All the great spiritual masters of the Church recommend good spiritual direction. Ask your parish priest, youth minister or vocation director to help you find someone that you can meet with periodically to discuss your spiritual life.
+
+
+</li>
+
+
+<li>
+<strong>Sacraments</strong><br>
+As Catholics we are guaranteed interaction with God’s grace through the Sacraments. Do not waste this gift! Sunday Mass and monthly confession should be standard for any young person discerning a vocation. Weekday Mass and Eucharistic adoration should also begin to develop over time.
+
+</li>
+
+<li>
+<strong>Talk to a Priest or Religious</strong><br>
+You can only learn so much about a vocation looking at it from the outside. Find a time and some courage to sit down and talk with a priest or religious about their own vocation story and what life is like for them.
+</li>
+
+<li>
+<strong>Go on a Discernment Retreat</strong><br>
+Most vocation offices and religious communities have retreats throughout the year that are open to young men and women who are discerning a religious vocation. Accept Jesus’ invitation to “Come and See” and spend some time at the seminary or with a religious community.
+</li>
+
+
+</ol>
+
+
+
+
+
+					</div><!--end text-info-->
+                  </div><!--end collapsible-->
+        
+     <div data-role="collapsible" data-collapsed="true">
+                  
+                  <h3>3 things necessary for Salvation</h3>
+                  
+  <div class="text-info">
+ <p>
+St. Thomas and the 3 things necessary for Salvation                    
+    
+</p>
+
+<ol>
+<li><strong>Know what to believe<br></strong>
+An important aspect for growing closer to Jesus is to grow in our understanding and knowledge of His bride the Church. Guided by the Holy Spirit, the Catholic Church contains the fullness of truth about who God is (revealed to us in the Blessed Trinity) and who we are as beloved sons and daughters of our heavenly Father. All of the Church’s teachings are derived from this foundation.</li>
+
+
+<li><strong>Know what to desire</strong><br>
+We all have desires. Some exist on the natural level, such as the desire for food when I am hungry and warmth when I am cold. Others exist on the emotional level, such as the desire for joy, the desire to be loved. But we also have spiritual desires that are the most important. These include the desire to know that I am beloved, that I have intrinsic worth and value, the desire for greatness (holiness). Ultimately, as we walk on our Christian journey, we pray that our desires become united to Jesus’ desires. 
+"Father, not my will, but yours be done" (Luke 22:42).&nbsp; In doing so, we fulfill the primordial desire that God has created us with....the desire for communion...to be one with another...one with God, and one with His body, the Church.</li>
+
+
+<li>
+<strong>Know what to do</strong><br>
+Knowing what to believe and what to desire does us little good unless we apply it to our daily lives in a practical way. If I believe that God created me for holiness, and I desire to do what He wants in my life, then my day to day actions ought to reflect it. Too often people describe themselves as “spiritual but not religious.” Often this means that they have little knowledge of what to believe, are only aware of their natural desires, and have even less knowledge of how to apply these realities to their daily lives.
+
+
+</li>
+
+</ol>
+
+
+
+
+
+					</div><!--end text-info-->
+                  </div><!--end collapsible-->
+
+
+ <div data-role="collapsible" data-collapsed="true">
+                  
+                  <h3>4 Identities of the Heart</h3>
+                  
+  <div class="text-info">
+ <p>
+When asked to describe themselves, people offer a variety of answers, from where they live, what school they go to, what teams they plan on, their hobbies, Facebook profiles etc...what rarely comes to people’s minds is to define themselves according to their relationship with God. If we are going to discover our vocations in life, we must begin by first defining ourselves differently. In looking at the life of Jesus, he publicly reveals different aspects of His identity in relationship to God the Father, the Holy Spirit, and the Church. Found within these relationships, we realize that Jesus also redefines who we are, by calling us to share in 
+ His identity as Christians. Pray about each of the following identities and ask the Holy Spirit to help solidify them within your heart.                   
+</p>
+
+<ol>
+<li><strong>Beloved Son/Daughter<br></strong>
+At the very beginning of His public ministry, Jesus is baptized in the Jordan river by St. John the Baptist. It was at this precise moment that Jesus’ identity as God the Father’s beloved son is first revealed to the crowds at large. “Behold, this is my beloved son, with whom I am well pleased” (Mt. 3:17). Through our own baptisms we now share in the identity of Christ and are able to cry out “Abba, Father” with Him (RM8:15, Gal 4:6). Knowing our identity as a beloved son or daughter of God is the foundation of the Christian life, and if we have not received and claimed this identity, we will spend our entire lives searching for self-worth, value and purpose in the things of this world, which were never meant to fulfill us in the first place.</li>
+
+
+<li><strong>Brotherhood/Sisterhood</strong><br>
+Many of us have been blessed to have at least one sibling in our families. Even if you are an only child, through the spiritual adoption you received in baptism, you have become part of the Church, the living Body of Christ and now are able to call all other believers brothers and sisters. Jesus himself reveals himself to be our brother when he states “‘Who are my brothers?" And stretching out His hand toward His disciples, he said, ‘Here are my mother and brothers. For whoever does the will of my heavenly Father is my brother and sister, and mother’” (Mt 12:48-50). The two fundamental lessons in receiving our identity as a brother or sister in Christ are 1) I belong to and am a part of something larger than myself; and 2) my gifts and talents are not for myself, but to be shared with others. Our society tries to make everything into a competition, instead of a mutual sharing and building up of gifts. Ask yourself; What gifts and talents has God given to me and look around you to celebrate the gifts God has surrounded you with in your brothers and sisters.</li>
+
+
+<li>
+<strong>Bridegroom/Bride</strong><br>
+The third identity of the heart that God bestows upon each one of us is that of either bridegroom or bride. This identity is lived out in all vocations, not just in the married life. To be a bridegroom or a bride means that I have a heart so on fire with love that I freely give my complete self to another for the salvation of souls. Jesus refers to himself as the bridegroom on several occasions during His public ministry (Mt 9:15; 25:1-10). Our entire salvation history begins and ends with marriage...the marriage of Adam and Eve in the garden, and the marriage of Jesus to His bride the Church. All of us have the destiny to lay down our lives for another so that they might live. A priest lays down His life for the Church, a sister lays down her life for her spouse, Jesus, a husband and wife enter into the mystery of marriage in laying down their lives for each other. Each is a response of love to love. 
+</li>
+
+
+<li>
+<strong>Fatherhood/Motherhood</strong><br>
+The final identity that God calls us to grow into in our hearts is paternity; to be a father or mother to another. Jesus reveals to His disciples that “Whoever has seen me, has seen the Father “(Jn 14:9). The end of redemption is to reunite us with our Heavenly Father, and like Jesus, to reveal the Father’s love into the world. Priests and religious, like Jesus, have no biological children, but have many spiritual children to whom they are called to nurture and love just as the Father desires. St. Paul reveals this mystery in his own life when he wrote to the people of Corinth, “I am writing this not to shame you, but to admonish you as my beloved children. Even if you should have countless guides to Christ, yet you do not have many fathers, for I became your father in Christ Jesus through the gospel” (1 Cor 4:14-15). 
+
+</li>
+
+
+
+</ol>
+
+
+
+
+
+					</div><!--end text-info-->
+                  </div><!--end collapsible-->
+
+
+
+
+
+
+
+        </div> 
+                <!-- / Collapsed Area -->
+        
+        
+            </div>
+            <!-- /content -->
+            
+            
+                
+            </div>
+            <!-- end -->
+        
+        </div>
+        
+        
+        
+        
+        
+        <!-- *********************************************************
+       	  END VOCATION BASICS
+        ********************************************************* -->
+        
+        
+        
+          <!-- *********************************************************
+       	 BEGIN QUESTIONS
+        ********************************************************* -->
+        <div data-role="page" class="pages pagesbg" id="questions" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">STL Vocations</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Questions">Common Questions</a></li>
+            <div class="crest">&nbsp;</div>
+</ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	<img src="img2/servers.jpg" alt="img" class="align-center imgbox fixwidth">
+                
+                <div class="text-info">
+                
+                <h2>Common Questions</h2>
+                
+               
+                </div>
+                <!-- / Text Area -->
+                
+                <div class="clearfix"></div>
+                
+                <!-- Collapsed Area -->
+                <div data-role="collapsible-set">
+                
+
+			  <div data-role="collapsible">
+                    <h3>Why can’t priests and religious get married?</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+              <strong>Why can’t priests and religious get married?
+              </strong><br>
+              Priests and religious are married in a sense. While giving up a sacramental marriage with a husband or wife, priests and religious share in the same marriage that Jesus lived, giving their lives out of love for Him and His people, and becoming spiritual parents to many.
+              </p>
+
+
+
+
+                    </div><!--end text info-->
+                    
+                  </div><!--end collapsible-->
+  
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>If I like dating does that mean I don’t have a vocation?</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              <strong>If I like dating does that mean I don’t have a vocation?</strong><br>
+            Not necessarily. Dating is the discernment of marriage, and we should all see the beauty of that vocation. Jesus speaks about those who give up marriage “for the sake of the kingdom” (Lk 18:29), and it wouldn’t be much of an offering if you didn’t find it attractive.              </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>What vows do you make?</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              <strong>What vows do you make?<br>
+</strong>            Diocesan 
+			  priests actually don’t make vows, they make promises; celibacy for the sake of the kingdom, a promise to pray for the people of God and a promise of obedience to the bishop and his successors. Religious priests, sisters and brothers, take the vows of poverty, chastity and obedience.              </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>What is the difference between a diocesan and religious order priest?</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              <strong>What is the difference between a diocesan and religious order priest?</strong><br>
+        Diocesan priests typically serve a parish in a diocese and serve that same diocese for their entire life. Religious order priests (Jesuits, Franciscans, Benedictines, Dominicans etc...) first live out their lives in their communities, and serve the Church worldwide.        </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>What is the difference between a sister and a nun or a brother and a monk?</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              <strong>What is the difference between a sister and a nun or a brother and a monk?</strong><br>
+  Both sisters and nuns belong to religious communities. However, some men and women are called to a life of hidden contemplation in a monastery, and those we call monks or nuns.      </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>  How long does it take to get ordained? </h3>
+                    
+                    <div class="text-info">
+              
+              
+              <p>
+              <strong>How long does it take to get ordained?</strong><br>
+              A man entering out of high school will spend four years studying philosophy and another four studying theology, for a total of 8 years. A young man coming in after college will spend 6 years in formation, 2 in philosophy and 4 in theology.
+     </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+       <!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3> What should I look for when discerning a vocation? </h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              <strong>What should I look for when discerning a vocation?</strong><br>
+              Joy and peace are two great gifts of the Holy Spirit that confirm you are following God’s will. While every vocation has its difficulties and fears to be overcome, ultimately these two gifts, joy and peace, will prevail.
+     </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+     
+      
+               
+                </div> 
+                <!-- / Collapsed Area -->
+        
+            </div>
+            <!-- /content -->
+           
+                
+            </div>
+            <!-- end -->
+        
+        </div>
+        
+        </div><!--required ending div-->
+        
+        
+        
+        <!-- *********************************************************
+       	  END Questions
+        ********************************************************* -->
+
+
+    <!-- *********************************************************
+       	 BEGIN PRAYERS
+        ********************************************************* -->
+        <div data-role="page" class="pages pagesbg" id="prayers" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">STL Vocations</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Prayers">Vocation Prayers</a></li>
+            <div class="crest">&nbsp;</div>
+</ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	<img src="img2/rosary.jpg" alt="img" class="align-center imgbox fixwidth">
+                
+                <div class="text-info">
+                
+                <h2>Vocation Prayers</h2>
+                
+                <p>
+                Below is a collection of wonderful prayers to pray for an increase in Vocations. You may also want to enroll in the 
+                
+                <a href="#" onabort="invisibleM">
+                Invisible Monastery  
+              </a>as a way to make a committment to praying for Vocations.
+                </p>
+
+       
+                </div>
+                <!-- / Text Area -->
+                
+                <div class="clearfix"></div>
+                
+                <!-- Collapsed Area -->
+                <div data-role="collapsible-set">
+   
+<!-----------begin question--------------------->             
+
+			  <div data-role="collapsible">
+                    <h3>Litany for vocations</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+
+       Lord have mercy, <em>Lord have mercy</em>. <br>Christ have mercy, <em>Christ have mercy</em>.
+			  <br>Lord have mercy, <em>Lord have mercy</em>. <br>Christ, hear us. 
+			  <em>Christ, Graciously hear us</em>.
+             </p>
+
+<p>
+God the Father of heaven, <em>have mercy on us</em>. <br>God the Son, Redeemer of the world, <em>have mercy on us</em>. <br>God the Holy Spirit, <em>have mercy on us</em>. <br>Holy Trinity, one God, <em>have mercy on us</em>.
+
+</p>
+
+<p>
+Holy Mary, Mother of God, <em>pray for us</em>. <br>St. Joseph, Protector of the Church, 
+<em>pray for us</em>. <br>St. Louis, King of France, <em>pray for us</em>. <br>St. Rose Philippine Duchesne, 
+<em>pray for us</em>. <br>St. Vincent de Paul, <em>pray for us</em>. <br>St. John Vianney, patron of priests, 
+<em>pray for us</em>.
+
+</p>
+<p>
+Through your mercy, <em>send workers into your harvest, O Lord</em>. <br>Through 
+your kindness, <br>Through the power of the Holy Sacrifice of the Mass, <em>send workers into your harvest, O Lord</em>
+<br>Through the intercession of all the saints and angels, <em>send workers into your harvest, O Lord</em>
+<br>Through the sanctification of the family, <em>send workers into your harvest, O Lord</em>
+<br>Through parents being generously open to life, <em>send workers into your harvest, O Lord</em>
+<br>Through the example of priests and religious striving for holiness, <em>send workers into your harvest, O Lord</em>
+T<br>hrough a renewed sense of fidelity to our Catholic Faith, <em>send workers into your harvest, O Lord</em>
+
+</p>
+<p>
+Lamb of God, who takes away the sins of the world, <em>spare us O Lord</em>. <br>Lamb of God, who takes away the sins of the world, 
+<em>graciously hear us, O Lord</em>. <br>Lamb of God, who takes away the sins of the world, 
+<em>have mercy on us</em>.
+
+</p>
+
+<p>
+The harvest is abundant but the laborers are few.
+<br>We beg you, Lord; <em>send out laborers for Your harvest</em>.
+
+</p>
+
+
+
+
+
+                    </div><!--end text info-->
+                    
+                  </div><!--end collapsible-->
+  
+<!-----------end question--------------------->       
+  
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Prayer of self-abandonment</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+              <em>Charles Eugene de Foucauld (1858-1916)
+<br></em>
+            </p>
+						<p>
+              
+           			 Father, I abandon myself into your hands; do with me what you will. Whatever you may do. I thank you; I am ready for all, I accept all. Let only your will be done in me, and in all your creatures. I wish no more than this, 
+						O Lord.
+            </p>
+						<p>
+              
+           			 Into your hands I commend my soul; I offer it to you with all the love of my heart, for I love you, Lord, and so need to give myself, to surrender myself into your hands, without reserve, and with boundless confidence, for you are my Father.
+            </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Teresa of Avila</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+      Let nothing disturb you. Let nothing frighten you. All things pass. God does not change. Patience achieves everything. Whoever has God lacks nothing. God alone suffices.       </p>
+
+<p>
+Christ has no body on earth but yours; no hands but yours; no feet but yours. Yours are the eyes through which the compassion of Christ must look out on the world. Yours are the feet with which He is to go about doing good. Yours are the hands with which He is to bless His people.
+</p>
+
+
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Thou art a priest forever</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+  			<em>Jean-Baptiste Henri Lacordaire, O.P. (1802-1861)
+</em>
+     </p>
+						<p>
+  					  To live in the midst of the world with no desire for its pleasures; to be a member of every family, yet belonging to none; to share all sufferings; to penetrate all secrets, to heal all wounds; to daily go from men to God to offer Him their homage and petitions; to return from God to men to bring them His pardon and hope; to have a heart of fire for charity and a heart of bronze for chastity; to bless and to be blest forever. O God, what a life, and it is yours, O Priest of Jesus Christ!      </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>  Prayer of Generosity </h3>
+                    
+                    <div class="text-info">
+                    <p>
+                    <em>St. Ignatius Loyola</em>
+                    </p>
+              
+              <p>Lord Jesus, teach me to be generous;  teach me to serve you as you deserve,  to give and not to count the cost,  to fight and not to heed the wounds,  to toil and not to seek for rest,  to labor and not to seek reward,  except that of knowing that I do your will.
+Amen.   
+     </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+     
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Prayer of St. Francis</h3>
+                    
+                    <div class="text-info">
+                   
+              <p>Lord, make me an instrument of your peace.
+<br>Where there is hatred, let me sow love;
+<br>where there is injury,pardon;
+where there is doubt, faith;
+<br>where there is despair, hope;
+<br>where there is darkness, light;
+<br>and where there is sadness, joy.
+ 
+     </p>
+
+<p>
+O Divine Master, grant that I may not so much seek
+<br>to be consoled as to console;
+<br>to be understood as to understand;
+<br>to be loved as to love.
+<br>For it is in giving that we receive;
+<br>it is in pardoning that we are pardoned;
+<br>and it is in dying that we are born to eternal life. <br>Amen
+
+</p>
+
+
+
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+
+
+
+<!-----begin a sub set----------->
+	<div data-role="collapsible" data-theme="">
+					<h3>Common Prayers</h3>
+
+
+<div data-role="collapsible-set" data-theme="" data-content-theme="">
+
+	<div data-role="collapsible" data-theme="">
+					<h3>Our Father</h3>
+				Our Father, Who art in heaven, 
+Hallowed be Thy Name. 
+Thy Kingdom come. 
+Thy Will be done, on earth as it is in Heaven. Give us this day our daily bread. 
+And forgive us our trespasses, 
+as we forgive those who trespass against us.
+And lead us not into temptation,
+but deliver us from evil. Amen.					
+					</div>	
+
+
+<div data-role="collapsible" data-theme="">
+					<h3>Hail Mary</h3>
+Hail Mary,
+Full of Grace,
+The Lord is with thee.
+Blessed art thou among women,
+and blessed is the fruit
+of thy womb, Jesus.
+Holy Mary,
+Mother of God,
+pray for us sinners now,
+and at the hour of death.
+Amen.
+		
+					</div>	
+<div data-role="collapsible" data-theme="">
+					<h3>Glory Be</h3>
+Glory be to the Father,
+and to the Son,
+and to the Holy Spirit.
+As it was in the beginning,
+is now,
+and ever shall be,
+world without end.
+Amen.
+					</div>	
+<div data-role="collapsible" data-theme="">
+					<h3>Apostle's Creed</h3>
+I believe in God, the Father Almighty, Creator of Heaven and earth;
+and in Jesus Christ, His only Son Our Lord,
+Who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried.
+He descended into Hell; the third day He rose again from the dead;
+He ascended into Heaven, and sitteth at the right hand of God, the Father almighty; from thence He shall come to judge the living and the dead.
+ I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting.
+
+Amen.
+					</div>	
+<div data-role="collapsible" data-theme="">
+					<h3>Guardian Angel Prayer</h3>
+Angel of God,
+my guardian dear,
+To whom God's love
+commits me here,
+Ever this day,
+be at my side,
+To light and guard,
+Rule and guide.
+Amen.
+
+	</div>	
+
+<div data-role="collapsible" data-theme="">
+					<h3>St. Michael the Archangel</h3>
+St. Michael the Archangel,
+defend us in battle.
+Be our defense against the wickedness and snares of the Devil.
+May God rebuke Him, we humbly pray,
+and do thou,
+O Prince of the heavenly hosts,
+by the power of God,
+thrust into hell Satan,
+and all the evil spirits,
+who prowl about the world
+seeking the ruin of souls. Amen.
+	</div>	
+
+
+<div data-role="collapsible" data-theme="">
+					<h3>Come Holy Spirit</h3>
+Come, Holy Spirit, fill the hearts of Thy faithful and enkindle in them the fire of Thy love.
+
+<p>
+<strong>Leader:</strong> Send forth Thy Spirit and they shall be created. <br>
+<strong>Response:</strong> And Thou shalt renew the face of the earth.
+</p>
+
+Let us pray. O God, Who didst instruct the hearts of the faithful by the light of the Holy Spirit, grant us in the same Spirit to be truly wise, and ever to rejoice in His consolation. Through Christ our Lord.
+
+
+
+	</div>	
+
+<div data-role="collapsible" data-theme="">
+					<h3>Memorare</h3>
+Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thine intercession was left unaided.
+Inspired by this confidence, I fly unto thee, O Virgin of virgins, my mother; to thee do I come, before thee I stand, sinful and sorrowful. O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me. Amen.	</div>
+
+
+<div data-role="collapsible" data-theme="">
+					<h3>Magnificat</h3>
+					<p>
+My soul proclaims the greatness of the Lord,
+my spirit rejoices in God my Savior
+for he has looked with favor on His lowly servant.
+From this day all generations will call me blessed:
+the Almighty has done great things for me,
+and holy is His Name.<p>
+</p>
+He has mercy on those who fear Him
+in every generation.
+He has shown the strength of His arm,
+he has scattered the proud in their conceit.<p>
+</p>
+He has cast down the mighty from their thrones,
+and has lifted up the lowly.
+He has filled the hungry with good things,
+and the rich he has sent away empty.<p>
+</p>
+He has come to the help of His servant Israel
+for he remembered His promise of mercy,
+the promise he made to our fathers,
+to Abraham and His children forever. <p>
+</p>
+(Lk 1:46-55)
+
+	</div>
+	
+	
+	
+	<div data-role="collapsible" data-theme="">
+					<h3>Hail Holy Queen</h3>
+
+	
+	
+	Hail, holy Queen, mother of mercy, our life, our sweetness, and our hope. To thee do we cry, poor banished children of Eve. To thee do we send up our sighs mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us, and after this our exile show us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+
+Pray for us, O Holy Mother of God.
+
+That we may be made worthy of the promises of Christ.
+
+</div>	
+	
+<!--end the collapsible set of common prayers-->	
+	
+	
+	
+	
+				</div><!--end subset of common prayers-->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!------begin prayer section-------------->
+
+
+<div data-role="collapsible" data-theme="">
+					<h3>The Rosary</h3>
+
+<p>
+<strong>The Rosary is prayed in the following manner:
+</strong>
+<ol>
+<li>Make the Sign of the Cross: In the Name of the Father, and of the Son and of the Holy Spirit.</li>
+<li>Pray the Apostle's Creed: Found in Common Prayers section.</li>
+<li>Pray one Our Father, One Hail Mary, and One Glory Be: Also found in Common Prayers section.</li>
+<li>Pray each of the five "decades" of the Rosary. A decade consists one one Our Father, ten Hail Marys, and one Glory Be. While praying the ten Hail Mary's for each of the five decades, you may want to meditate on the mysteries outlined below. Each set of mysteries offers one meditation for each of the five decades of the Rosary. </li>
+
+<li>The Rosary ends by praying the Hail Holy Queen, also found above.</li>
+</ol>
+
+</p>
+<h3>Joyful Mysteries</h3>
+<ol>
+<li> The Annunciation </li>
+<li>  The Visitation </li>
+<li>  The Nativity </li>
+<li>  The Presentation </li>
+<li> The Finding of Jesus in the Temple </li>
+
+</ol>
+
+
+
+<h3>Sorrowful Mysteries</h3>
+<ol> 
+<li> The Agony in the Garden </li>
+<li>  The Scourging at the Pillar </li>
+<li> The Crowning with Thorns </li>
+<li> The Carrying of the Cross </li>
+<li> The Crucifixion </li>
+
+</ol>
+
+
+
+<h3>Sorrowful Mysteries</h3>
+<ol> 
+<li> The Resurrection </li>
+<li>  The Ascension </li>
+<li> The Descent of the Holy Spirit</li>
+<li> The Assumption of the Blessed Virgin Mary </li>
+<li> The Coronation of the Blessed Virgin Mary </li>
+
+</ol>
+
+
+<h3>Luminous Mysteries</h3>
+<ol> 
+<li>  The Baptism in the Jordan </li>
+<li>  The Wedding at Cana </li>
+<li> Proclamation of the Kingdom</li>
+<li> The Transfiguration </li>
+<li> Institution of the Eucharist </li>
+
+</ol>
+
+</div>
+
+
+
+
+
+<!----------end prayer section------------>
+
+
+
+
+
+
+
+     
+      
+               
+                </div> 
+                <!-- / Collapsed Area -->
+        
+            </div>
+            <!-- /content -->
+            
+            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
+            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a" style="display:none;">
+            
+                <div data-role="navbar" class="nav-glyphish" data-grid="c">
+                    <ul>
+                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
+                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- end -->
+        
+        </div>
+        
+        
+        </div><!--end-->
+        
+        <!-- *********************************************************
+       	  END PRAYERS
+        ********************************************************* -->
+        
+  <!-- *********************************************************
+       	 BEGIN SCRIPTURES
+        ********************************************************* -->
+        <div data-role="page" class="pages pagesbg" id="scriptures" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">STL Vocations</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Prayers">Scripture</a></li>
+            <div class="crest">&nbsp;</div>
+</ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            		<img src="img2/sister.jpg" alt="img" class="align-center imgbox fixwidth">
+
+                
+                <div class="text-info">
+                
+                <h2>Scriptures </h2>
+                <p>
+                Below are many Bible passages that can be used for prayerful reflection on various vocational topics.
+                </p>
+               
+                </div>
+                <!-- / Text Area -->
+                
+                <div class="clearfix"></div>
+                
+                <!-- Collapsed Area -->
+                <div data-role="collapsible-set">
+   
+<!-----------begin question--------------------->             
+
+			  <div data-role="collapsible">
+                    <h3>Discipleship (Old Testament)</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+             <p><strong>Gen 12:1-9</strong> <em>The Call of Abram:</em> Leave your country and family to come</p>
+<p><strong>Gen 22:1-19</strong> <em>Faith to obey God:</em> Abraham is commanded to offer Isaac</p>
+<p><strong>Gen 37-50</strong> <em>God orchestrates our lives to bring us to our vocation:</em> The Story of Joseph</p>
+<p><strong>Exo 3:1-12</strong> <em>The Call of Moses:</em> “I will be with you”</p>
+<p><strong>1 Sam 3:1-10</strong> <em>The Call of Samuel:</em> “Speak, Lord, for your servant is listening”</p>
+<p><strong>1 Kgs 19:16, 19-21</strong> <em>The Call of Elisha: “’</em>Please let me kiss my father and mother goodbye and I will follow you’…then he left and followed Elijah.”</p>
+<p><strong>Isa 6:1-13</strong> <em>The Call of Isaiah</em>: “’Whom shall I send?’…‘Here I am…send me!’”</p>
+<p><strong>Isa 42:6-7</strong> “I have called you… I have grasped you by the hand… To open the eyes of the blind.”</p>
+<p><strong>Isa 43:1-ff </strong>“Do not fear, for I have redeemed you; I have called you by name, you are mine”</p>
+<p><strong>Isa 45:4</strong> “I have called you by your name… though you knew me not.”</p>
+<p><strong>Isa 49:1-7</strong> “The Lord called me from birth, from my mother’s womb he gave me my name.”</p>
+<p><strong>Jer 1:1-10</strong> <em>The call of Jeremiah: “’</em>Lord God,  I know not how to speak.  I am too young…’ ‘Say not I am too young… to whomever I send you, you shall go.’”</p>
+<p><strong>Jer 20: 7-9</strong> <em>Jeremiah’s crisis:</em> “You duped me O Lord and I let myself be duped.  You were too strong for me and you triumphed… It seemed like a fire burning in my heart.”</p>
+<p><strong>Jer 29: 11-15 </strong>“I know well the plans I have in mind for you…to give you a future full of hope.”</p>
+<p><strong>Jon 1-3</strong> <em>The Call of Jonah:</em> “The word of the Lord came to Jonah; set out for the great city of Ninevah and preach against it…”</p>              </p>
+
+
+
+
+                    </div><!--end text info-->
+                    
+                  </div><!--end collapsible-->
+  
+<!-----------end question--------------------->       
+  
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Discipleship (New Testament)</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+           <p><strong>Mt 4:18-22 or Mk 1:16-20</strong> <em>Jesus Calls His first disciples:</em> “Come after me and I will make you fishers of men.”</p>
+<p><strong>Mt 9: 35-38 </strong><em>Pray for priestly vocations: </em>“The harvest is rich but the laborers are few; beg the harvest master to send out laborers for His harvest.”</p>
+<p><strong>Mt 16:24-28 </strong>“Whoever wishes to come after me must deny himself, take up His cross and follow me.”</p>
+<p><strong>Mt 17:1-13 </strong><em>The Transfiguration of Jesus:</em> “This is my beloved Son with whom I am well pleased.  Listen to Him.”</p>
+<p><strong>Mt 19: 16-30 or Mk 10: 17-27</strong> <em>The Rich Young Man:</em> “If you wish to be perfect, go, sell what you have and give to the poor, and you will have treasure in heaven.  Then come follow me.”</p>
+<p><strong>Mt 20:20-28 or Mk 10:35-45</strong> <em>The request of James and John:</em> “Anyone who wants to be great among you must be your servant… just as the Son of Man came not to be served but to serve, and to give His life as a ransom for the many.”</p>
+<p><strong>Mt 26:17-35 or Mk 14:12-26 or Lk 22:1-38</strong> <em>The Last Supper:</em> “Take and eat; this is my body.  This is the cup of my blood.  Do this in remembrance of me.”</p>
+<p><strong>Mt 26:36-46</strong> <em>The Agony in the Garden:</em> “My Father, if it is possible, let this cup pass from me; yet not as I will but as you will.”</p>
+<p><strong>Mt 28 </strong><em>The Great Commission</em>: “Go ye therefore and make disciples of all the nations.”</p>
+<p><strong>Lk 4:18</strong> “The spirit of the Lord is upon me, because he has anointed me to bring glad tidings to the poor, to proclaim liberty to captives, and recovery of sight to the blind…”</p>
+<p><strong>Lk 9:57-62 </strong>“’I will follow you but first let me say farewell to my family’… ‘No one who sets a hand to the plow and looks to what was left behind is fit for the Kingdom of God.’”</p>
+<p><strong>Jn 2: 1-11 </strong><em>The wedding feast at Cana: </em>“Do whatever He tells you.”</p>
+<p><strong>Jn 15:9-17</strong> “You did not choose me, but I chose you and appointed you that you should go and bear fruit and that your fruit should abide.”</p>
+<p><strong>Jn 10 </strong><em>The Good Shepherd:</em> “When the Good Shepherd has driven out all His own, he walks ahead of them and the sheep follow him, because they recognize His voice.”</p>
+<p><strong>Jn 19:1-30</strong> <em>The Mother of priests:</em> “Behold your mother.” The disciple (the priest St. John) took her into His home.</p>
+<p><strong>Mk 3:13 </strong><em>The Mission of the Twelve:</em> “He summoned those whom he wanted and they came to Him”</p>
+<p><strong>Mk 10:28-30</strong> <em>The  Reward of Discipleship:</em> “We have given up everything and followed you…you will  be repaid a hundred times more now in this present age…and eternal life in the age to come.”</p>
+<p><strong>Lk 1:26-56 </strong><em>The Call of Mary:</em> The Annunciation: “Behold I am the handmaid of the Lord; may it be done to me according to your word.”</p>
+<p><strong>Lk 14:25-33 </strong><em>Jesus on Discipleship:</em> “Whoever does not carry His own cross and come after me cannot be my disciple.”</p>
+<p><strong>Jn 1:35-51 </strong><em>The call of the first disciples:</em> “What are you looking for?  Come and see.”</p>
+<p><strong>Rom 8:28</strong> “All things work for good for those who love God, who are called according to His purpose.”</p>
+<p><strong>1 Cor 1:26-31 </strong><em>God calls who He chooses: </em>“Consider your own calling…Not many of you were wise… Rather God chose the foolish to shame the wise.”</p>
+<p><strong>Gal 1:15 </strong>“God, who from my mother’s womb, had set me apart and called me through His grace”</p>
+<p><strong>Phil 3:10-14 </strong>“Forgetting what lies behind but straining forward to what lies ahead…the prize of God’s upward calling in Christ Jesus.”</p>
+<p><strong>1 Pt 2:9-10 </strong>“God has called you out of darkness into His own marvelous light.”</p>            </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Discernment</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+              
+            <p><strong>Mt 16:13-23</strong> “Who do people say that I am?”</p>
+<p><strong>Acts 1:15-26</strong> <em>The choice of Matthias</em></p>
+<p><strong>Acts 6:1-6 </strong><em>The selection of the first deacons</em></p>
+<p><strong>Acts 13: 2-4 </strong><em>Paul and Barnabas selected by the Holy Spirit to go and preach</em></p>
+<p><strong>Acts 15:28</strong> “It is the decision of the Holy Spirit and of us.”</p>
+<p><strong>Rom 8:14-17</strong> “You did not receive a spirit of slavery to fall back into fear.”</p>
+<p><strong>Rom 12:1-2</strong> “Do not conform yourself to this age…that you may discern what is the will of God.”</p>
+<p><strong>1 Cor 2: 7-12</strong> “This God has revealed to us…so that we may understand.”</p>
+<p><strong>1 Cor 12:4-11</strong> “There are different kinds of spiritual gifts but the same Spirit.”</p>
+<p><strong>Gal 5:16-26</strong> <em>The works of the flesh</em></p>
+<p><strong>Eph 1: 3-14</strong> “In Him we were also chosen.”</p>
+<p><strong>Eph 1:17 </strong>“A spirit of wisdom and revelation resulting in knowledge of Him.”</p>
+<p><strong>1 Jn 4:1-3</strong> “Do not trust every spirit but test the spirits to see whether they belong to God”</p>           </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Priesthood</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+        <p><strong>Jn 13:1-14</strong> <em>The washing of the Disciples’ feet</em></p>
+<p><strong>1 Pet 2:2-10</strong> “Come to Him…let yourselves be built…to be a holy priesthood.”</p>
+<p><strong>Heb 4:12-16</strong> <em>Jesus, the compassionate high priest</em></p>
+<p><strong>Heb 5:1-10</strong> “Every high priest is taken from among men”</p>
+<p><strong>Heb 10:10-17</strong> “Every priest stands daily at His ministry&#8221;</p>
+<p><strong>Heb 3: 7-11</strong> “If today you hear His voice, harden not your hearts.”</p>
+<p><strong>Heb 7:17</strong> “You are a priest forever according to the order of Melchizedek.”</p>
+<p><strong>Heb 8:3</strong> “Now every high priest is appointed to offer gifts and sacrifices.”</p>      </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>Celibacy</h3>
+                    
+                    <div class="text-info">
+              
+              <p>
+<p><strong>1Cor.7:-34</strong> “I should like you to be free of anxieties.  An unmarried man is anxious about the things of the Lord, how he may please the Lord.  But a married man is anxious about the things of the world, how he may please his wife, and he is divided.</p>
+<p><strong>Mt 19:10-12 </strong>“Some are incapable of marriage because they were born so; some, because they were made so by others; some, because they have renounced marriage for the sake of the kingdom of heaven.  Whoever can accept this ought to accept it.”</p>
+<p><strong>Lk 18:29-30</strong> “Anyone who has given up house or wife or brothers… for the sake of the  Kingdom of God will receive back an overabundant return in this present age and eternal life in the age to come.”</p>
+<p><strong>Hos 2:21-22 </strong>“I will espouse you to me forever; I will espouse you in fidelity and you shall know the Lord…”</p>    </p>
+
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+<!-----------begin question--------------------->
+                
+			  <div data-role="collapsible">
+                    <h3>  Particular Circumstances </h3>
+                    
+                    <div class="text-info">
+              
+             <p><strong>I’m not holy enough:</strong> Isa 6:1-9; Lk 5:1-11</p>
+<p><strong>I’m afraid I will fail:</strong> Ex 14: 10-31; Lk 15</p>
+<p><strong>I’ve made mistakes and I’m a sinner</strong>: Jn 21:15-23; Mt 9:9-13; Lk 7:36-50</p>
+<p><strong>I’m too young:</strong> 1 Sam 3:1-18; 1 Sam 16:1-13; Jer 1:4-10; Lk 1:26-3</p>
+<p><strong>I’m not talented enough</strong>: 1 Sam 17:32-51; Lk 1: 26-38</p>
+<p><strong>I want to have a family:</strong> Gen 12:1-3; Mt 12:46-50; Mk 10:28-30</p>
+<p><strong>I want “the good life”:</strong> Mk 10:17-31; 1 Cor 2:9; Mt 13:44-46; Jn 10:10; Mt 16:24-27</p>
+<p><strong>I’m afraid of making a permanent commitment:</strong> Ruth 1:15-17;    Mt 28:16-20; 1 Cor 12:5-10</p>
+<p><strong>I’m afraid of public speaking</strong>: Ex 4:10-17; Jer 1:4-10; Jer 1: 9-10</p>
+<p><strong>I’m not smart enough:</strong> 2 Cor 4:7-18; Ex 4:10-17</p>
+<p><strong>I’m afraid of being alone:</strong> Ex 3:4-22; Lk 1:28-38; Mt 28:20</p>
+<p><strong>I want to be happy:</strong> Ps 37:4; Mt 5: 1-12; Jn 10:10; Mk 10:28-31; 1 Cor 2:9</p>
+<p><strong>I’m filled with fear:</strong> 1Jn 4:18 “There is no fear in love, but perfect love casts out fear.”</p>
+                    </div><!--end text info-->                
+                  </div><!--end collapsible-->
+
+
+<!------------end question------------------>
+
+     
+     
+      
+               
+                </div> 
+                <!-- / Collapsed Area -->
+        
+            </div>
+            <!-- /content -->
+            
+            <!-- If you want to use your mobile project copy / paste this (FOOTER) -->
+            <div data-role="footer" class="nav-glyphish" data-position="fixed" data-theme="a" style="display:none;">
+            
+                <div data-role="navbar" class="nav-glyphish" data-grid="c">
+                    <ul>
+                        <li><a href="#blog" class="iconsub-white-Idcard" data-icon="custom">Blog</a></li>
+                        <li><a href="mailto:email@somewhere.com" class="iconsub-white-Envelope" data-icon="custom">Email</a></li>
+                        <li><a href="tel:+900000000" class="iconsub-white-Phone" data-icon="custom">Phone</a></li>
+                        <li><a href="#home" class="iconsub-white-House" data-icon="custom">Home</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- end -->
+        
+        </div>
+        
+        
+        </div><!--end-->
+        
+        <!-- *********************************************************
+       	  END SCRIPTURES
+        ********************************************************* -->
+
+       
+        
+
+    <!-- *********************************************************
+       	 BEGIN VIDEO
+        ********************************************************* -->
+        <div data-role="page" class="pages pagesbg" id="videos" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">STL Vocations</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Questions">Videos</a></li>
+            <div class="crest">&nbsp;</div>
+</ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	
+            	<div class="text-info">
+            	
+            	
+  <!----------------------AJAX REQUEST AND DISPLAY--------------------->
+
+<script>
+
+function getVideos() { 
+
+ $.ajax({
+  type: "GET",
+  
+  cache: false, 	
+  url: "http://web4uonline.com/louis/videos.php",
+//  data: "", 
+   dataType: "json",
+  success: function(videos) 
+  {
+ document.getElementById("resultsVideos").innerHTML=videos.videos;  
+  }
+  
+  
+});
+
+}
+
+</script>  
+
+<!-------AJAX END----->
+
+<button onclick="getVideos()" value="Update Videos">Update Videos</button>
+<script type="text/javascript">getVideos();</script>
+
+  <div id="resultsVideos">getting data...internet connection required</div> 
+ 
+ 
+ 
+ 
+ 
+      </div>
+               
+       </div> <!--end text info--> 
+    </div>  <!--end content-->    
+    </div>   <!--end text-box-area--> 
+    
+    
+    
+    
+    </div>  <!--end page role--->  
+        
+        <!-- *********************************************************
+       	  END VIDEO
+        ********************************************************* -->
+
+
+<!-- *********************************************************
+       	 BEGIN NEWS
+        ********************************************************* -->
+ 
+
+        
+        
+        <div data-role="page" class="pages pagesbg" id="news" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">STL Vocations</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Questions">News & Events</a></li>
+            <div class="crest">&nbsp;</div>
+</ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	
+            	<div class="text-info">
+            	
+            	
+            	
+     
+
+     	
+            	
+            	
+            	
+<!----------------------AJAX REQUEST AND DISPLAY--------------------->
+
+<script>
+
+function getNews() { 
+
+ $.ajax({
+  type: "GET",
+  
+  cache: false, 	
+  url: "http://web4uonline.com/louis/news.php",
+//  data: "", 
+   dataType: "json",
+  success: function(news) 
+  {
+ document.getElementById("resultsNews").innerHTML=news.news;  
+  }
+  
+  
+});
+
+}
+
+</script>  
+
+<!----------------------END  AJAX REQUEST AND DISPLAY--------------------->
+
+
+<button onclick="getNews()" value="Update News">Update News</button>
+
+<script type="text/javascript">getNews();</script>
+
+<div id="resultsNews">getting data...internet connection required</div>
+
+
+        
+
+
+               
+               
+               
+               </div>
+               
+       </div> <!--end text info--> 
+    </div>  <!--end content-->    
+    </div>   <!--end text-box-area--> 
+    
+    
+    
+    
+    </div>  <!--end page role--->  
+        
+        <!-- *********************************************************
+       	  END NEWS
+        ********************************************************* -->
+
+
+
+<!-- *********************************************************
+       	 BEGIN CONTACT
+        ********************************************************* -->
+        <div data-role="page" class="pages pagesbg" id="contact" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">STL Vocations</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Contact">Contact</a></li>
+            <div class="crest">&nbsp;</div>
+</ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	
+            	<div class="text-info" style="overflow:hidden;">
+            	
+            	
+              
+              
+ <!----------------------AJAX REQUEST AND DISPLAY--------------------->
+
+<script>
+
+function getContact() { 
+
+ $.ajax({
+  type: "GET",
+  
+  cache: false, 	
+  url: "http://web4uonline.com/louis/contact.php",
+//  data: "", 
+   dataType: "json",
+  success: function(contact) 
+  {
+ document.getElementById("resultsContact").innerHTML=contact.contact;  
+  }
+  
+  
+});
+
+}
+
+</script>  
+
+<!----------------------END  AJAX REQUEST AND DISPLAY--------------------->
+
+
+
+
+<script type="text/javascript">getContact();</script>
+
+<div id="resultsContact">getting data...internet connection required</div>
+
+ 
+               
+               
+   
+               
+       </div> <!--end text info--> 
+    </div>  <!--end content-->    
+    </div>   <!--end text-box-area--> 
+    
+    
+    
+    
+    </div>  <!--end page role--->  
+        
+        <!-- *********************************************************
+       	  END CONTACT
+        ********************************************************* -->
+        
+        
+        
+        
+
+<!-- *********************************************************
+       	 BEGIN APP
+        ********************************************************* -->
+        <div data-role="page" class="pages pagesbg" id="app" data-theme="i">
+        	
+            <!-- Header Begin -->
+            <div data-role="header" class="header" data-theme="h">
+            <a href="#" class="showMenu menuBtn">Menu</a>
+            <div class="logo">STL Vocations</div>
+            </div>
+            <!-- /header -->
+            
+            <!-- breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="#home"><div class="homeicon"></div></a></li>
+                <li><a href="#" title="Contact">About the App</a></li>
+            <div class="crest">&nbsp;</div>
+</ul>
+            <!-- / breadcrumb-->
+            
+            <!-- Content Begin -->
+            <div data-role="content">
+            
+            	<!-- Text Area -->
+            	<div class="text-box-area">
+            	
+            	<div class="text-info" style="overflow:hidden;">
+            	
+            	
+              
+              
+ <!----------------------AJAX REQUEST AND DISPLAY--------------------->
+
+<script>
+
+function getApp() { 
+
+ $.ajax({
+  type: "GET",
+  
+  cache: false, 	
+  url: "http://web4uonline.com/louis/app.php",
+//  data: "", 
+   dataType: "json",
+  success: function(app) 
+  {
+ document.getElementById("resultsApp").innerHTML=app.app;  
+  }
+  
+  
+});
+
+}
+
+</script>  
+
+<!----------------------END  AJAX REQUEST AND DISPLAY--------------------->
+
+
+
+
+<script type="text/javascript">getApp();</script>
+
+<div id="resultsApp">getting data...internet connection required</div>
+
+ 
+               
+               
+   
+               
+       </div> <!--end text info--> 
+    </div>  <!--end content-->    
+    </div>   <!--end text-box-area--> 
+    
+    
+    
+    
+    </div>  <!--end page role--->  
+        
+        <!-- *********************************************************
+       	  END App
+        ********************************************************* -->
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+<!--plugin--->
+<script src="childbrowser.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------FOR PUSH------------------------------------->
+	
+   <!--<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>-->
+        
+      
+        <script type="text/javascript" src="PushNotification.js"></script>
+        <script src="pushwoosh.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            var pushNotification;
+            
+            function onDeviceReady() {
+                $("#app-status-ul").append('<li>deviceready event received</li>');
+                
+				document.addEventListener("backbutton", function(e)
+				{
+                	$("#app-status-ul").append('<li>backbutton event received</li>');
+  					
+      				if( $("#home").length > 0)
+					{
+						// call this to get a new token each time. don't call it to reuse existing token.
+						//pushNotification.unregister(successHandler, errorHandler);
+						e.preventDefault();
+						navigator.app.exitApp();
+					}
+					else
+					{
+						navigator.app.backHistory();
+					}
+				}, false);
+
+				try 
+				{ 
+                	pushNotification = window.plugins.pushNotification;
+                	if (device.platform == 'android' || device.platform == 'Android') {
+						$("#app-status-ul").append('<li>registering android</li>');
+                    	pushNotification.register(successHandler, errorHandler, {"senderID":"506974520454","ecb":"onNotificationGCM"});		// required!
+					} else {
+						$("#app-status-ul").append('<li>registering iOS</li>');
+                    	pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});	// required!
+                	}
+                }
+				catch(err) 
+				{ 
+					txt="There was an error on this page.\n\n"; 
+					txt+="Error description: " + err.message + "\n\n"; 
+					alert(txt); 
+				} 
+            }
+            
+            // handle APNS notifications for iOS
+            function onNotificationAPN(e) {
+                if (e.alert) {
+                     $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
+                     navigator.notification.alert(e.alert);
+                }
+                    
+                if (e.sound) {
+                    var snd = new Media(e.sound);
+                    snd.play();
+                }
+                
+                if (e.badge) {
+                    pushNotification.setApplicationIconBadgeNumber(successHandler, e.badge);
+                }
+            }
+            
+            // handle GCM notifications for Android
+            
+
+///////////////////////////////////PUSHWOOSH FOR ANDROID/////////////////////////////////////////////////////            
+            
+          // handle GCM notifications for Android
+ function onNotificationGCM(e) {
+     switch( e.event )
+     {
+         case 'registered':
+         if ( e.regid.length > 0 )
+         {
+             // Your GCM push server needs to know the regID before it can push to this device
+             // here is where you might want to send it the regID for later use.
+             PushWoosh.appCode = "F6ECC-CA3D9";
+             PushWoosh.register(e.regid, function(data) {
+                     //    alert("PushWoosh register success: " + JSON.stringify(data));
+                     }, function(errorregistration) {
+                     //    alert("Push Connection Error" +  errorregistration);
+                     });
+ 
+         }
+         break;                    
+///////////////////////////////////PUSHWOOSH FOR ANDROID/////////////////////////////////////////////////////                      
+                    
+                    case 'message':
+                    	// if this flag is set, this notification happened while we were in the foreground.
+                    	// you might want to play a sound to get the user's attention, throw up a dialog, etc.
+                    	if (e.foreground)
+                    	{
+							$("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
+
+							// if the notification contains a soundname, play it.
+							var my_media = new Media("/android_asset/www/"+e.soundname);
+							my_media.play();
+						}
+						else
+						{	// otherwise we were launched because the user touched a notification in the notification tray.
+							if (e.coldstart)
+								$("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
+							else
+							$("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
+						}
+
+						$("#app-status-ul").append('<li>MESSAGE -> MSG: ' + e.payload.message + '</li>');
+						$("#app-status-ul").append('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt + '</li>');
+                    break;
+                    
+                    case 'error':
+						$("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
+                    break;
+                    
+                    default:
+						$("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+                    break;
+                }
+            }
+     
+/////////////////////////////////PUSHWOOSH INSERT FOR APPLE //////////////////////////////////////////
+       
+            function tokenHandler (result) {
+               
+                // Your iOS push server needs to know the token before it can push to this device
+                // here is where you might want to send it the token for later use.
+               PushWoosh.appCode = "F6ECC-CA3D9";
+    		PushWoosh.register(result, function(data) {
+                    //    alert("PushWoosh register success: " + JSON.stringify(data));
+                    }, function(errorregistration) {
+                    //    alert("Couldn't register with PushWoosh" +  errorregistration);
+                    });
+                    
+            }         
+                    
+/////////////////////////////////PUSHWOOSH INSERT FOR APPLE //////////////////////////////////////////                
+                
+           
+
+            function successHandler (result) {
+                $("#app-status-ul").append('<li>success:'+ result +'</li>');
+            }
+            
+            function errorHandler (error) {
+                $("#app-status-ul").append('<li>error:'+ error +'</li>');
+            }
+            
+			document.addEventListener('deviceready', onDeviceReady, true);
+
+         </script>  
+  
+
+
+
+<!---------------------------------------END PUSH--------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+	
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. ( Optional ) -->
+        <script>
+            var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+            g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+            s.parentNode.insertBefore(g,s)}(document,"script"));
+        </script>
+        <!-- Google End -->
+    </body>
+    
+    
+    
+    
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</html>
