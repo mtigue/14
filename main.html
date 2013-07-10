@@ -164,7 +164,7 @@ var ua = navigator.userAgent;
 if( ua.indexOf("Android") >= 0 )
 {
   var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8)); 
-  if (androidversion < 2.9)
+  if (androidversion < 3.5)
   {
       // do something
       
@@ -180,9 +180,9 @@ if( ua.indexOf("Android") >= 0 )
                    
                  
                    
+              <li><a href="#videos" class="contentLink" data-transition="none">Videos<span class="icon"></span></a></li>      
                    
-                   
-                   <li><a href="#videos" class="contentLink" data-transition="none">Videos<span class="icon"></span></a></li>
+                  
                      
                   <script>
 
@@ -190,7 +190,7 @@ var ua = navigator.userAgent;
 if( ua.indexOf("Android") >= 0 )
 {
   var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8)); 
-  if (androidversion < 2.9)
+  if (androidversion < 3.5)
   {
       // do something
       
@@ -1622,7 +1622,32 @@ That we may be made worthy of the promises of Christ.
 
 <script>
 
+
+//kill getVideos function if Android less than 3.5
+
+var ua = navigator.userAgent;
+if( ua.indexOf("Android") >= 0 )
+{
+  var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8)); 
+  
+  
+  
+  if (androidversion < 3.5)
+  {
+      // do something
+      window.getVideos=function(){return false;};
+      
+  }
+}
+
+///
+
+
+
+
 function getVideos() { 
+
+
 
  $.ajax({
   type: "GET",
@@ -1644,7 +1669,6 @@ function getVideos() {
 </script>  
 
 
-
 <!-------AJAX END----->
 <script>
 
@@ -1652,15 +1676,16 @@ var ua = navigator.userAgent;
 if( ua.indexOf("Android") >= 0 )
 {
   var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8)); 
-  if (androidversion < 2.9)
+  
+  
+  
+  if (androidversion < 3.5)
   {
       // do something
+      document.write("it worked");
       
-      document.write("<div style='display:none';>");
   }
 }
-
-
 
 
 </script>
@@ -1671,7 +1696,7 @@ if( ua.indexOf("Android") >= 0 )
 
 
 <button onclick="getVideos()" value="Update Videos">Update Videos</button>
-<script type="text/javascript">// getVideos();</script>
+<script type="text/javascript">getVideos();</script>
 
 
 
@@ -1682,7 +1707,7 @@ if( ua.indexOf("Android") >= 0 )
 
   <div id="resultsVideos">getting data...internet connection required</div> 
  
- 
+
  
  <script>
 
@@ -1690,11 +1715,11 @@ var ua = navigator.userAgent;
 if( ua.indexOf("Android") >= 0 )
 {
   var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8)); 
-  if (androidversion < 2.9)
+  if (androidversion < 3.5)
   {
       // do something
       
-      document.write("</div>");
+      
   }
 }
 
